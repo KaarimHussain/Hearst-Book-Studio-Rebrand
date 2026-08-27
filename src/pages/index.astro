@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.tsx";
+import Hero from "../components/Hero.astro";
+import BrandsSection from "../components/BrandsSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import BooksSection from "../components/BooksSection.tsx";
+import ConcernsSection from "../components/ConcernsSection.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import SuccessStoriesSection from "../components/SuccessStoriesSection.tsx";
+import HowWeWork from "../components/HowWeWork.astro";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import EverythingSection from "../components/EverythingSection.tsx";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <Hero />
+  </div>
+  <BrandsSection />
+  <AboutSection />
+  <BooksSection client:load />
+  <ConcernsSection />
+  <ServicesSection />
+  <SuccessStoriesSection client:load />
+  <HowWeWork />
+  <WhyChooseUs />
+  <EverythingSection client:load />
+  <Footer />
 </Layout>

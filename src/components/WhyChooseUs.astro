@@ -1,0 +1,52 @@
+---
+const bg =
+  "https://www.figma.com/api/mcp/asset/a22cf540-ebab-42e1-be2f-ef1128ad3fbc.png";
+const bookTilt =
+  "https://www.figma.com/api/mcp/asset/77ca9661-db08-4257-a561-aa7b34f0d4a9.png";
+---
+
+<section class="relative py-14 sm:py-16">
+  <img
+    src={bg}
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+  />
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Tilted book: only shown on lg+ -->
+  <div
+    class="hidden lg:flex absolute right-20 top-0 bottom-0 w-52 xl:w-60 items-center pointer-events-none"
+  >
+    <div class="rotate-[26deg]">
+      <img src={bookTilt} alt="" class="w-full object-cover" />
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
+    <h2
+      class="text-white font-bold text-xl sm:text-2xl uppercase leading-tight mb-3"
+    >
+      Why Choose Us?
+    </h2>
+    <p
+      class="text-white text-xs sm:text-sm font-medium leading-relaxed mb-7 sm:mb-8 max-w-xl mx-auto"
+    >
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+      has been the industry's standard dummy text ever since 1966.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a
+        href="/contact"
+        class="w-full sm:w-auto inline-block bg-white h-10 px-6 leading-10 text-black font-semibold text-sm hover:bg-[#3075ba] hover:text-white transition-colors text-center"
+      >
+        Speak to our Consultant
+      </a>
+      <a
+        href="tel:"
+        class="w-full sm:w-auto inline-block border-2 border-white h-10 px-6 leading-[36px] text-white font-semibold text-sm hover:bg-white hover:text-black transition-colors text-center"
+      >
+        Call Now
+      </a>
+    </div>
+  </div>
+</section>

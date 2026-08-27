@@ -1,0 +1,217 @@
+---
+const instagram =
+  "https://www.figma.com/api/mcp/asset/0ed92d7c-78c9-401c-8ac3-2e6271c74367.svg";
+const facebook =
+  "https://www.figma.com/api/mcp/asset/fc791c87-d6d1-4b56-b5c2-53193c7355dd.svg";
+const twitter =
+  "https://www.figma.com/api/mcp/asset/08c67dec-b326-4efd-8e50-20b1424efaaa.svg";
+const linkedin =
+  "https://www.figma.com/api/mcp/asset/9c8bd4ab-ca30-4e60-ab65-9843809daca0.svg";
+
+const quickLinks = [
+  "Home",
+  "About Us",
+  "Services",
+  "Packages",
+  "Portfolio",
+  "Contact",
+];
+const category = ["Book Editing", "Proofing", "Content"];
+const customerService = ["Login", "Contact Us", "FAQs", "Delivery Dates"];
+const aboutLinks = ["Privacy Policy", "Terms and Condition", "Cookie Policy"];
+const socials = [instagram, facebook, twitter, linkedin];
+---
+
+<footer class="bg-white pt-6 pb-4">
+  <div class="max-w-9xl mx-auto px-4 sm:px-6 relative overflow-hidden">
+    <div
+      class="bg-black rounded-2xl px-5 sm:px-8 lg:px-10 py-8 sm:py-10 overflow-hidden"
+    >
+      <!-- Watermark -->
+      <p
+        class="absolute -bottom-0 md:-bottom-10 inset-x-0 text-white opacity-[0.12] font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase leading-none whitespace-nowrap pointer-events-none select-none text-center"
+      >
+        Hearst Book Studio
+      </p>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <!-- Top section: 4 link columns + social icons -->
+        <div
+          class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-0 mb-8 sm:mb-10"
+        >
+          <!-- 4 columns grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 flex-1">
+            <!-- Quick Links -->
+            <div>
+              <h4
+                class="text-white font-bold text-xs sm:text-sm leading-6 mb-3 uppercase"
+              >
+                Quick Links
+              </h4>
+              <ul>
+                {
+                  quickLinks.map((l) => (
+                    <li>
+                      <a
+                        href="#"
+                        class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <!-- Category -->
+            <div>
+              <h4
+                class="text-white font-bold text-xs sm:text-sm leading-6 mb-3 uppercase"
+              >
+                Category
+              </h4>
+              <ul>
+                {
+                  category.map((l) => (
+                    <li>
+                      <a
+                        href="#"
+                        class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div>
+              <h4
+                class="text-white font-bold text-xs sm:text-sm leading-6 mb-3 uppercase"
+              >
+                Customer Service
+              </h4>
+              <ul>
+                {
+                  customerService.map((l) => (
+                    <li>
+                      <a
+                        href="#"
+                        class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <!-- About Us -->
+            <div>
+              <h4
+                class="text-white font-bold text-xs sm:text-sm leading-6 mb-3 uppercase"
+              >
+                About Us
+              </h4>
+              <ul>
+                {
+                  aboutLinks.map((l) => (
+                    <li>
+                      <a
+                        href="#"
+                        class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+
+              <!-- Social icons: shown inline under About Us on mobile -->
+              <div class="flex gap-3 mt-5 sm:hidden">
+                {
+                  socials.map((icon) => (
+                    <a href="#" class="hover:opacity-70 transition-opacity">
+                      <img src={icon} alt="" class="w-5 h-5" />
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Social icons: top-right on sm+ -->
+          <div class="hidden sm:flex gap-3 ml-6 flex-shrink-0 pt-0.5">
+            {
+              socials.map((icon) => (
+                <a href="#" class="hover:opacity-70 transition-opacity">
+                  <img src={icon} alt="" class="w-5 h-5" />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Bottom row: newsletter left + contact right -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-10 items-center justify-center sm:gap-10"
+        >
+          <!-- Subscribe to Newsletter -->
+          <div>
+            <p
+              class="text-white font-bold text-xs sm:text-sm uppercase leading-6 mb-3"
+            >
+              Subscribe To Newsletter
+            </p>
+            <div class="flex max-w-xs">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="bg-[#343434] rounded-l-full h-9 px-4 text-white text-xs flex-1 outline-none placeholder-gray-400 min-w-0"
+              />
+              <button
+                class="bg-[#4a4a4a] rounded-r-full h-9 px-4 text-white font-semibold text-xs hover:bg-[#3075ba] transition-colors whitespace-nowrap"
+              >
+                SEND
+              </button>
+            </div>
+            <!-- Copyright -->
+            <p class="text-white font-semibold text-xs uppercase mt-7 sm:mt-8">
+              HEARST© 2026 All Rights Reserved
+            </p>
+          </div>
+
+          <!-- Contact Us -->
+          <div
+            class="flex flex-col md:flex-row md:justify-end gap-2 md:gap-5 md:items-center"
+          >
+            <h4
+              class="text-white font-bold text-xs sm:text-sm uppercase leading-6 mb-3"
+            >
+              Contact Us
+            </h4>
+            <ul class="space-y-1">
+              {
+                ["PHONE:", "EMAIL:", "ADDRESS:"].map((label) => (
+                  <li class="text-[#d2d2d2] text-xs uppercase leading-6">
+                    <span class="text-white font-semibold">{label}</span>{" "}
+                    <span class="text-[#888]">
+                      -------------------------------------------------
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+        <!-- Divider -->
+        <div class="border-t border-white/10 mb-7 mt-10 sm:mb-15"></div>
+      </div>
+    </div>
+  </div>
+</footer>

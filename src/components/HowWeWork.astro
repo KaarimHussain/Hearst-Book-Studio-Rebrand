@@ -1,0 +1,65 @@
+---
+const diagram = "https://www.figma.com/api/mcp/asset/7acb0fa4-f297-45ca-8cc7-d93bd283d8b1.svg";
+
+const steps = [
+  { title: "Editing", desc: "Elevate your manuscript with our editing service that ensures every word tells your story the way you intended." },
+  { title: "Proofreading", desc: "Our proofreading team is your safety net, catching every slip-up to make your writing flawless." },
+  { title: "Formatting", desc: "From font choice to margins, our formatting service makes sure your book is dressed to impress." },
+  { title: "Typesetting", desc: "Expert typesetting that makes your book as easy on the eyes as it is engaging for the mind." },
+  { title: "Publishing", desc: "Your literary journey culminates with our publishing service, placing your book in the spotlight it deserves." },
+];
+---
+
+<section class="py-10 sm:py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
+      How We Work
+    </h2>
+    <p class="text-[#555] text-xs sm:text-sm font-medium text-center leading-relaxed mb-8 sm:mb-10">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry has
+      been the industry's standard dummy text ever since 1966.
+    </p>
+
+    <!-- Diagram: hidden on mobile, shown on lg+ -->
+    <div class="hidden lg:block relative h-[480px]">
+      <img src={diagram} alt="How We Work" class="absolute inset-0 w-full h-full" />
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-[6%] left-[37%] right-[38%] bottom-[72%] bg-white rounded-xl shadow-md flex flex-col justify-center p-3 pointer-events-auto">
+          <p class="font-bold text-xs uppercase mb-1">Editing</p>
+          <p class="text-xs text-black leading-snug">Elevate your manuscript with our editing service that ensures every word tells your story the way you intended.</p>
+        </div>
+        <div class="absolute top-[23%] left-0 right-[76%] bottom-[52%] bg-white rounded-xl shadow-md flex flex-col justify-center p-3 pointer-events-auto">
+          <p class="font-bold text-xs uppercase mb-1">Proofreading</p>
+          <p class="text-xs text-black leading-snug">Our proofreading team is your safety net, catching every slip-up to make your writing flawless.</p>
+        </div>
+        <div class="absolute top-[20%] left-[74%] right-0 bottom-[59%] bg-white rounded-xl shadow-md flex flex-col justify-center p-3 pointer-events-auto">
+          <p class="font-bold text-xs uppercase mb-1">Formatting</p>
+          <p class="text-xs text-black leading-snug">From font choice to margins, our formatting service makes sure your book is dressed to impress.</p>
+        </div>
+        <div class="absolute top-[65%] left-[22%] right-[52%] bottom-[14%] bg-white rounded-xl shadow-md flex flex-col justify-center p-3 pointer-events-auto">
+          <p class="font-bold text-xs uppercase mb-1">Typesetting</p>
+          <p class="text-xs text-black leading-snug">Expert typesetting that makes your book as easy on the eyes as it is engaging for the mind.</p>
+        </div>
+        <div class="absolute top-[57%] left-[65%] right-[9%] bottom-[22%] bg-white rounded-xl shadow-md flex flex-col justify-center p-3 pointer-events-auto">
+          <p class="font-bold text-xs uppercase mb-1">Publishing</p>
+          <p class="text-xs text-black leading-snug">Your literary journey culminates with our publishing service, placing your book in the spotlight it deserves.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile/tablet: simple card grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden">
+      {steps.map((s, i) => (
+        <div class="bg-white rounded-xl border border-black/10 shadow-sm p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="bg-[#3075ba] text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <p class="font-bold text-sm uppercase">{s.title}</p>
+          </div>
+          <p class="text-xs text-[#555] leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

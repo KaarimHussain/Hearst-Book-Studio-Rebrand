@@ -1,0 +1,46 @@
+---
+const aboutImg =
+  "https://www.figma.com/api/mcp/asset/de4aead6-1455-4a5c-a34f-122969c5d9f0.png";
+const arrowIcon =
+  "https://www.figma.com/api/mcp/asset/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
+---
+
+<section class="py-0 overflow-hidden">
+  <!-- Stack on mobile, side-by-side on md+ -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+    <div
+      class="bg-[rgba(217,217,217,0.1)] flex flex-col justify-center px-6 sm:px-8 md:px-10 py-10 sm:py-12 order-2 md:order-1"
+    >
+      <h2
+        class="font-bold text-xl sm:text-2xl uppercase leading-snug text-black mb-3 sm:mb-4"
+      >
+        About Us HEARST Book Publishing
+      </h2>
+      <p class="text-[#555] text-sm leading-relaxed mb-6 sm:mb-7">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since 1966 when designers at Letraset and James Mosley, the librarian at
+        St Bride Printing Library in London, took a 1914 Cicero translation and
+        scrambled it to make dummy text for Letraset's Body Type sheets.
+      </p>
+      <div>
+        <a
+          href="/about"
+          class="inline-flex items-center gap-2 bg-black h-10 px-5 text-white font-semibold text-sm hover:bg-[#3075ba] transition-colors"
+        >
+          Read More
+          <img src={arrowIcon} alt="" class="w-4 h-4 rotate-180" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Image: fixed height on mobile/tablet, stretches to match text col on md+ -->
+    <div class="order-1 md:order-2 h-64 sm:h-80 md:h-auto min-h-0">
+      <img
+        src={aboutImg}
+        alt="About Hearst Book Publishing"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+const brands = [
+  { src: "https://www.figma.com/api/mcp/asset/12fb3ff9-6759-40ef-b6a9-dffc726cb2a4.png", alt: "Barnes & Noble" },
+  { src: "https://www.figma.com/api/mcp/asset/c38fbace-0004-4c44-b110-bb1cc8f05389.png", alt: "BAM!" },
+  { src: "https://www.figma.com/api/mcp/asset/c4a01c02-50a1-408d-9bd5-a4271206f812.png", alt: "Draft2Digital" },
+  { src: "https://www.figma.com/api/mcp/asset/fd28468b-b5f4-4ea1-8f29-484ccb425daa.png", alt: "Amazon" },
+  { src: "https://www.figma.com/api/mcp/asset/cf923b6d-13b6-48f7-98ac-2fd8e5ccf396.png", alt: "Goodreads" },
+  { src: "https://www.figma.com/api/mcp/asset/eae8858b-fdc5-41b1-aa8c-7ed7a3afeee6.png", alt: "Google" },
+  { src: "https://www.figma.com/api/mcp/asset/fa3f687c-b1a5-449a-992a-3e30101c7b73.png", alt: "Kobo" },
+];
+const arrowIcon = "https://www.figma.com/api/mcp/asset/73cfb89a-102c-46a2-985b-76410b2dfdfa.svg";
+const allBrands = [...brands];
+---
+
+<section class="py-8 sm:py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <p class="text-[#555] text-sm leading-relaxed mb-6 sm:mb-8">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since 1966, when designers at Letraset and James
+      Mosley took a 1914 Cicero translation.
+    </p>
+
+    <!-- 2 cols mobile → 4 cols tablet+ -->
+    <div class="grid grid-cols-2 sm:grid-cols-4">
+      {allBrands.map((brand) => (
+        <div class="border border-[rgba(185,185,185,0.5)] flex items-center justify-center h-28 sm:h-36 lg:h-40 p-4 sm:p-5">
+          <img src={brand.src} alt={brand.alt} class="max-h-12 sm:max-h-14 lg:max-h-16 max-w-full object-contain" />
+        </div>
+      ))}
+      <!-- Black promo tile -->
+      <div class="bg-black flex flex-col items-start justify-end h-28 sm:h-36 lg:h-40 p-4 sm:p-5">
+        <p class="text-white font-bold text-xs sm:text-sm uppercase leading-snug mb-2 sm:mb-3">
+          Explore our entire<br />brand portfolio
+        </p>
+        <img src={arrowIcon} alt="" class="w-4 h-4 sm:w-5 sm:h-5 rotate-180" />
+      </div>
+    </div>
+  </div>
+</section>

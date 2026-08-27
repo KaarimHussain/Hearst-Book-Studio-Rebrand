@@ -1,0 +1,51 @@
+---
+const services = [
+  { num: "01", title: "Book Editing",  img: "https://www.figma.com/api/mcp/asset/3d8dbdbc-59e0-43a4-a165-bea438ed9677.png" },
+  { num: "02", title: "Proofreading",  img: "https://www.figma.com/api/mcp/asset/a71d8191-2f58-41cc-bd59-b12d10b3b7bf.png" },
+  { num: "03", title: "Book Format",   img: "https://www.figma.com/api/mcp/asset/d70e365d-9ed9-42df-8518-a5397562f3e2.png" },
+  { num: "04", title: "Typesetting",   img: "https://www.figma.com/api/mcp/asset/4599a98e-909b-49ab-a21c-2c40f9001dcf.png" },
+  { num: "05", title: "Book Publish",  img: "https://www.figma.com/api/mcp/asset/e5ca6d60-16de-4a0d-98f4-5a267bc99282.png" },
+  { num: "06", title: "Print",         img: "https://www.figma.com/api/mcp/asset/c6ded3f3-c353-431e-8d4f-28040078be18.png" },
+  { num: "07", title: "Audio Book",    img: "https://www.figma.com/api/mcp/asset/886d2e42-1730-4558-b9e0-a9c24c4b823e.png" },
+  { num: "08", title: "Barcode",       img: "https://www.figma.com/api/mcp/asset/f4f4c968-9905-4fe6-ad52-ff239531cd13.png" },
+];
+---
+
+<section class="py-10 sm:py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
+      Our Publishing Services
+    </h2>
+    <p class="text-[#555] text-xs sm:text-sm font-medium text-center leading-relaxed mb-8 sm:mb-10">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry has
+      been the industry's standard dummy text ever since 1966.
+    </p>
+
+    <!-- 1 col mobile → 2 sm → 3 md → 4 lg -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+      {services.map((s) => (
+        <div class="border-2 border-[rgba(0,0,0,0.1)] rounded-lg overflow-hidden group hover:shadow-md transition-shadow">
+          <div class="h-32 sm:h-36 overflow-hidden">
+            <img
+              src={s.img}
+              alt={s.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-3">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-bold text-xs text-black uppercase">{s.num}</span>
+              <div class="relative">
+                <span class="font-bold text-xs sm:text-sm text-black uppercase">{s.title}</span>
+                <div class="absolute -bottom-0.5 left-0 bg-[#3075ba] h-[3px] w-5"></div>
+              </div>
+            </div>
+            <p class="text-[#555] text-xs leading-relaxed mt-3">
+              Lorem Ipsum is simply dummy text of the printing.
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
