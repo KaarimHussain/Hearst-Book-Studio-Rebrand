@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import InnerPageHero from "../../components/InnerPageHero.astro";
+import BookPublishingIntro from "../../components/BookPublishingIntro.astro";
+import BookPublishingFeatures from "../../components/BookPublishingFeatures.astro";
+import HowWeWork from "../../components/HowWeWork.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Book Publishing — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero
+      bgImg="https://www.figma.com/api/mcp/asset/14b1ebf3-46ce-49c1-9471-dbb2cd7661b0.png"
+      heading="Bring Your Book to Life with Expert Publishing!"
+    />
+  </div>
+
+  <BookPublishingIntro />
+  <BookPublishingFeatures />
+  <HowWeWork />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/b970ac2b-febd-4171-a7c1-b3f42ba164dc.png"
+    bookImg="https://www.figma.com/api/mcp/asset/56e00cfe-2acd-4daa-8ece-e76cb4d68c7e.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>

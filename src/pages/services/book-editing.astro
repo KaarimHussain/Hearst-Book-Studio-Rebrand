@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import InnerPageHero from "../../components/InnerPageHero.astro";
+import BookEditingIntro from "../../components/BookEditingIntro.astro";
+import BookEditingFeatures from "../../components/BookEditingFeatures.astro";
+import HowWeWork from "../../components/HowWeWork.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Book Editing — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero
+      bgImg="https://www.figma.com/api/mcp/asset/38650c39-2c26-4ceb-8ee7-c887c67e25b7.png"
+      heading="Polish Your Manuscript to Perfection!"
+    />
+  </div>
+
+  <BookEditingIntro />
+  <BookEditingFeatures />
+  <HowWeWork />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/c0e8c22b-1c9a-4460-8ad6-7e21a2905ef3.png"
+    bookImg="https://www.figma.com/api/mcp/asset/e9561c78-fd1e-48f7-a500-2f8b6f391ded.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>

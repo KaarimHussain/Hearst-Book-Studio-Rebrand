@@ -1,0 +1,71 @@
+---
+const checkIcon = "https://www.figma.com/api/mcp/asset/82c01109-236c-45ff-995a-8ea53d80f311.svg";
+
+const bullets = [
+  "Paperback and hardcover printing in any quantity, large or small",
+  "Full-colour and black-and-white interiors on premium paper stocks",
+  "Gloss, matte, and soft-touch lamination options for covers",
+  "Print-on-demand setup so you never over-order or waste stock",
+  "Fast turnaround times with worldwide shipping and delivery tracking",
+];
+
+const featureCards = [
+  {
+    icon: "https://www.figma.com/api/mcp/asset/6a4b6410-34b4-4a34-94b6-0d4d482c700e.svg",
+    title: "Hardcover & Paperback Printing",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/3b809ff9-f9f6-4a11-9978-e33a9bc16f78.svg",
+    title: "Full Colour Interior Printing",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/b9a9e404-cee1-4a15-9699-eaa651e60b9e.svg",
+    title: "Print-on-Demand Distribution",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/402f6d29-7ca4-4ad1-b0c4-4bbac9bde74c.svg",
+    title: "Barcode & ISBN Ready Files",
+  },
+];
+---
+
+<section class="py-10 sm:py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start">
+
+      <!-- Left: title + checklist -->
+      <div>
+        <h2 class="font-bold text-xl sm:text-2xl uppercase leading-snug text-black mb-3 sm:mb-4">
+          Expert Book Printing Made Simple.
+        </h2>
+        <p class="text-[#555] text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
+          We take care of every printing detail so your finished book looks
+          exceptional — from the very first copy to the very last.
+        </p>
+        <ul class="space-y-3">
+          {bullets.map((b) => (
+            <li class="flex items-start gap-3">
+              <img src={checkIcon} alt="" class="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span class="text-[#555] text-xs sm:text-sm leading-relaxed">{b}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Right: 2×2 feature cards -->
+      <div class="grid grid-cols-2 gap-3 sm:gap-4">
+        {featureCards.map((card) => (
+          <div class="bg-[rgba(217,217,217,0.1)] rounded-xl p-4 sm:p-5">
+            <div class="bg-[rgba(217,217,217,0.5)] w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3">
+              <img src={card.icon} alt="" class="w-7 h-7 sm:w-8 sm:h-8" />
+            </div>
+            <p class="font-semibold text-xs sm:text-sm text-black capitalize leading-snug">
+              {card.title}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import InnerPageHero from "../../components/InnerPageHero.astro";
+import TypesettingIntro from "../../components/TypesettingIntro.astro";
+import TypesettingFeatures from "../../components/TypesettingFeatures.astro";
+import HowWeWork from "../../components/HowWeWork.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Typesetting — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero
+      bgImg="https://www.figma.com/api/mcp/asset/559554d2-d782-4d8a-900a-dcdf867fdcb1.png"
+      heading="Set the Stage for an Unforgettable Read!"
+    />
+  </div>
+
+  <TypesettingIntro />
+  <TypesettingFeatures />
+  <HowWeWork />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/05edc24b-0f3b-4321-bdb0-2f353eaa2b68.png"
+    bookImg="https://www.figma.com/api/mcp/asset/bc7d7751-afdc-4f52-8a2d-58053a5cc36f.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>

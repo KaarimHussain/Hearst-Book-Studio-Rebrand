@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import InnerPageHero from "../../components/InnerPageHero.astro";
+import ProofreadingIntro from "../../components/ProofreadingIntro.astro";
+import ProofreadingFeatures from "../../components/ProofreadingFeatures.astro";
+import HowWeWork from "../../components/HowWeWork.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Proofreading — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero
+      bgImg="https://www.figma.com/api/mcp/asset/32710af7-5c4f-4256-a4f8-3ed8b51de442.png"
+      heading="Polish Your Manuscript to Perfection!"
+    />
+  </div>
+
+  <ProofreadingIntro />
+  <ProofreadingFeatures />
+  <HowWeWork />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/05edc24b-0f3b-4321-bdb0-2f353eaa2b68.png"
+    bookImg="https://www.figma.com/api/mcp/asset/bc7d7751-afdc-4f52-8a2d-58053a5cc36f.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>

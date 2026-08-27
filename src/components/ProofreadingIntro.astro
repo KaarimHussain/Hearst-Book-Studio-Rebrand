@@ -1,0 +1,54 @@
+---
+const photo = "https://www.figma.com/api/mcp/asset/644bf75c-f5e8-41d4-b437-1b0ca56a0e56.png";
+---
+
+<!-- Reversed 2-col: photo left, text right -->
+<section class="py-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+
+    <!-- Left: photo -->
+    <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
+      <img
+        src={photo}
+        alt="Proofreading"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Right: text -->
+    <div
+      class="bg-[rgba(217,217,217,0.1)] flex flex-col justify-center px-6 sm:px-8 md:px-10 py-10 sm:py-12 order-2"
+    >
+      <h2 class="font-bold text-xl sm:text-2xl uppercase leading-snug text-black mb-3 sm:mb-4">
+        HEARST Book Studio A Leading Proofreading Company
+      </h2>
+      <p class="text-[#555] text-sm leading-relaxed mb-4">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since 1966 when designers at Letraset and James Mosley, the librarian at
+        St Bride Printing Library in London.
+      </p>
+      <p class="text-[#555] text-sm leading-relaxed">
+        Took a 1914 Cicero translation and scrambled it to make dummy text for
+        Letraset's Body Type sheets took a 1914 Cicero translation. Lorem Ipsum
+        is simply dummy text of the printing and typesetting industry. Lorem
+        Ipsum has been the industry's standard dummy text ever since 1966 when
+        designers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Full-width centered paragraph -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+  <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since 1966,
+    when designers at Letraset and James Mosley, the librarian at St Bride
+    Printing Library in London, took a 1914 Cicero translation. Lorem Ipsum is
+    simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+    been the industry's standard dummy text ever since 1966, when designers at
+    Letraset and James Mosley, the librarian at St Bride Printing Library in
+    London, took a 1914 Cicero translation.
+  </p>
+</div>

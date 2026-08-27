@@ -1,0 +1,89 @@
+---
+const services = [
+  {
+    num: "01",
+    title: "Book Editing",
+    img: "https://www.figma.com/api/mcp/asset/c64564d3-844c-43e1-b7aa-f4f4cafee7d2.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "02",
+    title: "Proofreading",
+    img: "https://www.figma.com/api/mcp/asset/8819b6ad-821b-4d8a-8387-d50de0fa7557.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "03",
+    title: "Book Format",
+    img: "https://www.figma.com/api/mcp/asset/8b5ca68e-21ee-4ba1-94e6-bfa99d26715d.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "04",
+    title: "Typesetting",
+    img: "https://www.figma.com/api/mcp/asset/23fddb50-549f-4263-ba5e-b8c5c587522b.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "05",
+    title: "Book Publish",
+    img: "https://www.figma.com/api/mcp/asset/4a7450b1-822b-4021-89e0-27770c29af6f.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "06",
+    title: "Print",
+    img: "https://www.figma.com/api/mcp/asset/0357a9c6-9a26-4963-bbcb-84454c9dc09b.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "07",
+    title: "Audio Book",
+    img: "https://www.figma.com/api/mcp/asset/6fe0fffc-f31e-4e93-aad5-7db4fdfcc79d.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+  {
+    num: "08",
+    title: "Barcode",
+    img: "https://www.figma.com/api/mcp/asset/5e5da00f-6c64-4ccb-89ed-41cb8b500056.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing.",
+  },
+];
+---
+
+<section class="py-10 sm:py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
+      Our Publishing Services
+    </h2>
+    <p class="text-[#555] text-xs sm:text-sm font-medium text-center leading-relaxed mb-8 sm:mb-10">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the
+      industry's standard dummy text ever since 1966.
+    </p>
+
+    <!-- 2 cols mobile → 3 cols md → 4 cols lg -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+      {services.map((s) => (
+        <div class="border-2 border-black/10 rounded-xl overflow-hidden">
+          <!-- Image -->
+          <div class="h-32 sm:h-40 overflow-hidden bg-gray-50">
+            <img
+              src={s.img}
+              alt={s.title}
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- Info -->
+          <div class="p-3 sm:p-4">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-bold text-sm sm:text-base text-black">{s.num}</span>
+              <span class="font-bold text-xs sm:text-sm text-black uppercase">{s.title}</span>
+            </div>
+            <div class="h-[3px] w-6 bg-[#3075ba] mb-2 rounded-full"></div>
+            <p class="text-xs text-[#555] leading-relaxed">{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

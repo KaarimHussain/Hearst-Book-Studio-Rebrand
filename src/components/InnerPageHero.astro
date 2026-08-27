@@ -1,0 +1,32 @@
+---
+interface Props {
+  bgImg: string;
+  heading: string;
+  subtext?: string;
+}
+const {
+  bgImg,
+  heading,
+  subtext = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966.",
+} = Astro.props;
+---
+
+<section class="relative w-full min-h-[80vh] flex items-end overflow-hidden">
+  <img
+    src={bgImg}
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+  />
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 lg:pb-16">
+    <h1
+      class="text-white font-bold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-3 sm:mb-4 max-w-2xl"
+    >
+      {heading}
+    </h1>
+    <p class="text-white text-xs sm:text-sm font-medium leading-relaxed max-w-2xl">
+      {subtext}
+    </p>
+  </div>
+</section>

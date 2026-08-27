@@ -1,8 +1,14 @@
 ---
-const bg =
-  "https://www.figma.com/api/mcp/asset/a22cf540-ebab-42e1-be2f-ef1128ad3fbc.png";
-const bookTilt =
-  "https://www.figma.com/api/mcp/asset/77ca9661-db08-4257-a561-aa7b34f0d4a9.png";
+interface Props {
+  bgImg?: string;
+  bookImg?: string;
+}
+const {
+  bgImg = "https://www.figma.com/api/mcp/asset/a22cf540-ebab-42e1-be2f-ef1128ad3fbc.png",
+  bookImg = "https://www.figma.com/api/mcp/asset/77ca9661-db08-4257-a561-aa7b34f0d4a9.png",
+} = Astro.props;
+const bg = bgImg;
+const bookTilt = bookImg;
 ---
 
 <section class="relative py-14 sm:py-16">

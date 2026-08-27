@@ -1,8 +1,13 @@
 ---
-const bg =
-  "https://www.figma.com/api/mcp/asset/1583e843-2525-49b5-8a8d-87ea3c2c4894.png";
-const bookImg =
-  "https://www.figma.com/api/mcp/asset/c692adf8-79d8-4ae6-a651-ff756ca126c7.png";
+interface Props {
+  bgImg?: string;
+  bookImg?: string;
+}
+const {
+  bgImg = "https://www.figma.com/api/mcp/asset/1583e843-2525-49b5-8a8d-87ea3c2c4894.png",
+  bookImg = "https://www.figma.com/api/mcp/asset/c692adf8-79d8-4ae6-a651-ff756ca126c7.png",
+} = Astro.props;
+const bg = bgImg;
 ---
 
 <!-- Outer wrapper: clips nothing — lets book overflow above -->

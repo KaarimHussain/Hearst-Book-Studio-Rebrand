@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.tsx";
+import ServicesHero from "../components/ServicesHero.astro";
+import BrandsSection from "../components/BrandsSection.astro";
+import PublishingServices from "../components/PublishingServices.astro";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import EverythingSection from "../components/EverythingSection.tsx";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Services — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <ServicesHero />
+  </div>
+
+  <BrandsSection />
+  <PublishingServices />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/0877452c-abf7-486b-8b6e-95e98752a156.png"
+    bookImg="https://www.figma.com/api/mcp/asset/c69cc364-7145-4634-806e-8f6f091735a6.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>

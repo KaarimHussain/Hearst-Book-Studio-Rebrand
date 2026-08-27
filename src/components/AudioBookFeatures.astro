@@ -1,0 +1,71 @@
+---
+const checkIcon = "https://www.figma.com/api/mcp/asset/82c01109-236c-45ff-995a-8ea53d80f311.svg";
+
+const bullets = [
+  "Professional narrator casting matched to your book's tone and genre",
+  "Studio-quality recording in acoustically treated environments",
+  "Expert sound editing, noise reduction, and audio mastering",
+  "Chapter marker setup and ACX-compliant file delivery",
+  "Direct submission to Audible, Apple Books, and all major platforms",
+];
+
+const featureCards = [
+  {
+    icon: "https://www.figma.com/api/mcp/asset/871f081f-72a5-4b86-8912-ef3860b1bcb5.svg",
+    title: "Professional Narrator Casting",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/d594e056-6435-4cab-98c2-22fdf0ff1c4b.svg",
+    title: "Studio Recording & Mastering",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/3fe3aca4-cdb5-444b-bfe2-49cfc723c4c4.svg",
+    title: "Multi-Platform Distribution",
+  },
+  {
+    icon: "https://www.figma.com/api/mcp/asset/c3e1af2b-f81c-4f6e-b5ad-f2bc1d4d4959.svg",
+    title: "Metadata & Chapter Tagging",
+  },
+];
+---
+
+<section class="py-10 sm:py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start">
+
+      <!-- Left: title + checklist -->
+      <div>
+        <h2 class="font-bold text-xl sm:text-2xl uppercase leading-snug text-black mb-3 sm:mb-4">
+          Expert Audio Book Production Made Simple.
+        </h2>
+        <p class="text-[#555] text-xs sm:text-sm leading-relaxed mb-5 sm:mb-6">
+          We manage every step of audio production so your book sounds as
+          compelling as it reads — ready for every listener on every platform.
+        </p>
+        <ul class="space-y-3">
+          {bullets.map((b) => (
+            <li class="flex items-start gap-3">
+              <img src={checkIcon} alt="" class="w-4 h-4 mt-0.5 flex-shrink-0" />
+              <span class="text-[#555] text-xs sm:text-sm leading-relaxed">{b}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Right: 2×2 feature cards -->
+      <div class="grid grid-cols-2 gap-3 sm:gap-4">
+        {featureCards.map((card) => (
+          <div class="bg-[rgba(217,217,217,0.1)] rounded-xl p-4 sm:p-5">
+            <div class="bg-[rgba(217,217,217,0.5)] w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex items-center justify-center mb-3">
+              <img src={card.icon} alt="" class="w-7 h-7 sm:w-8 sm:h-8" />
+            </div>
+            <p class="font-semibold text-xs sm:text-sm text-black capitalize leading-snug">
+              {card.title}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
