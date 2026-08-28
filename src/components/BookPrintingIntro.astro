@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/062c0b4d-4942-4e3d-969c-8c0bb1258d9b.png";
+const photo = "/images/062c0b4d-4942-4e3d-969c-8c0bb1258d9b.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -34,10 +35,10 @@ const photo = "https://www.figma.com/api/mcp/asset/062c0b4d-4942-4e3d-969c-8c0bb
         can be truly proud of.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     The physical quality of your book makes a lasting first impression on every reader who picks it up.
     HearEst Book Studio partners with premium printing facilities to deliver sharp text, vibrant cover
@@ -45,4 +46,4 @@ const photo = "https://www.figma.com/api/mcp/asset/062c0b4d-4942-4e3d-969c-8c0bb
     choosing between gloss and matte lamination, we guide you through every decision so your printed
     book reflects the same care and craft you poured into writing it.
   </p>
-</div>
+</ScrollReveal>

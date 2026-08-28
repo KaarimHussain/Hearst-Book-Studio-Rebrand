@@ -9,6 +9,7 @@ const {
   heading,
   subtext = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966.",
 } = Astro.props;
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="relative w-full min-h-[80vh] flex items-end overflow-hidden">
@@ -19,7 +20,7 @@ const {
   />
   <div class="absolute inset-0 bg-black/70"></div>
 
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 lg:pb-16">
+  <ScrollReveal client:visible direction="up" className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 lg:pb-16">
     <h1
       class="text-white font-bold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-3 sm:mb-4 max-w-2xl"
     >
@@ -28,5 +29,5 @@ const {
     <p class="text-white text-xs sm:text-sm font-medium leading-relaxed max-w-2xl">
       {subtext}
     </p>
-  </div>
+  </ScrollReveal>
 </section>

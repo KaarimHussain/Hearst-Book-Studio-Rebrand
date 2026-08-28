@@ -3,56 +3,57 @@ const services = [
   {
     num: "01",
     title: "Book Editing",
-    img: "https://www.figma.com/api/mcp/asset/c64564d3-844c-43e1-b7aa-f4f4cafee7d2.png",
+    img: "/images/c64564d3-844c-43e1-b7aa-f4f4cafee7d2.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "02",
     title: "Proofreading",
-    img: "https://www.figma.com/api/mcp/asset/8819b6ad-821b-4d8a-8387-d50de0fa7557.png",
+    img: "/images/8819b6ad-821b-4d8a-8387-d50de0fa7557.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "03",
     title: "Book Format",
-    img: "https://www.figma.com/api/mcp/asset/8b5ca68e-21ee-4ba1-94e6-bfa99d26715d.png",
+    img: "/images/8b5ca68e-21ee-4ba1-94e6-bfa99d26715d.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "04",
     title: "Typesetting",
-    img: "https://www.figma.com/api/mcp/asset/23fddb50-549f-4263-ba5e-b8c5c587522b.png",
+    img: "/images/23fddb50-549f-4263-ba5e-b8c5c587522b.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "05",
     title: "Book Publish",
-    img: "https://www.figma.com/api/mcp/asset/4a7450b1-822b-4021-89e0-27770c29af6f.png",
+    img: "/images/4a7450b1-822b-4021-89e0-27770c29af6f.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "06",
     title: "Print",
-    img: "https://www.figma.com/api/mcp/asset/0357a9c6-9a26-4963-bbcb-84454c9dc09b.png",
+    img: "/images/0357a9c6-9a26-4963-bbcb-84454c9dc09b.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "07",
     title: "Audio Book",
-    img: "https://www.figma.com/api/mcp/asset/6fe0fffc-f31e-4e93-aad5-7db4fdfcc79d.png",
+    img: "/images/6fe0fffc-f31e-4e93-aad5-7db4fdfcc79d.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
   {
     num: "08",
     title: "Barcode",
-    img: "https://www.figma.com/api/mcp/asset/5e5da00f-6c64-4ccb-89ed-41cb8b500056.png",
+    img: "/images/5e5da00f-6c64-4ccb-89ed-41cb8b500056.webp",
     desc: "Lorem Ipsum is simply dummy text of the printing.",
   },
 ];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-10 sm:py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
       Our Publishing Services
     </h2>
@@ -85,5 +86,5 @@ const services = [
         </div>
       ))}
     </div>
-  </div>
+  </ScrollReveal>
 </section>

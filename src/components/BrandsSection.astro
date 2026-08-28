@@ -1,19 +1,20 @@
 ---
 const brands = [
-  { src: "https://www.figma.com/api/mcp/asset/12fb3ff9-6759-40ef-b6a9-dffc726cb2a4.png", alt: "Barnes & Noble" },
-  { src: "https://www.figma.com/api/mcp/asset/c38fbace-0004-4c44-b110-bb1cc8f05389.png", alt: "BAM!" },
-  { src: "https://www.figma.com/api/mcp/asset/c4a01c02-50a1-408d-9bd5-a4271206f812.png", alt: "Draft2Digital" },
-  { src: "https://www.figma.com/api/mcp/asset/fd28468b-b5f4-4ea1-8f29-484ccb425daa.png", alt: "Amazon" },
-  { src: "https://www.figma.com/api/mcp/asset/cf923b6d-13b6-48f7-98ac-2fd8e5ccf396.png", alt: "Goodreads" },
-  { src: "https://www.figma.com/api/mcp/asset/eae8858b-fdc5-41b1-aa8c-7ed7a3afeee6.png", alt: "Google" },
-  { src: "https://www.figma.com/api/mcp/asset/fa3f687c-b1a5-449a-992a-3e30101c7b73.png", alt: "Kobo" },
+  { src: "/images/12fb3ff9-6759-40ef-b6a9-dffc726cb2a4.webp", alt: "Barnes & Noble" },
+  { src: "/images/c38fbace-0004-4c44-b110-bb1cc8f05389.webp", alt: "BAM!" },
+  { src: "/images/c4a01c02-50a1-408d-9bd5-a4271206f812.webp", alt: "Draft2Digital" },
+  { src: "/images/fd28468b-b5f4-4ea1-8f29-484ccb425daa.webp", alt: "Amazon" },
+  { src: "/images/cf923b6d-13b6-48f7-98ac-2fd8e5ccf396.webp", alt: "Goodreads" },
+  { src: "/images/eae8858b-fdc5-41b1-aa8c-7ed7a3afeee6.webp", alt: "Google" },
+  { src: "/images/fa3f687c-b1a5-449a-992a-3e30101c7b73.webp", alt: "Kobo" },
 ];
-const arrowIcon = "https://www.figma.com/api/mcp/asset/73cfb89a-102c-46a2-985b-76410b2dfdfa.svg";
+const arrowIcon = "/images/73cfb89a-102c-46a2-985b-76410b2dfdfa.svg";
 const allBrands = [...brands];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-8 sm:py-10 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <!-- 2 cols mobile → 4 cols tablet+ -->
     <div class="grid grid-cols-2 sm:grid-cols-4">
       {allBrands.map((brand) => (
@@ -29,5 +30,5 @@ const allBrands = [...brands];
         <img src={arrowIcon} alt="" class="w-4 h-4 sm:w-5 sm:h-5 rotate-180" />
       </div>
     </div>
-  </div>
+  </ScrollReveal>
 </section>

@@ -1,16 +1,14 @@
 ---
-const aboutImg =
-  "https://www.figma.com/api/mcp/asset/de4aead6-1455-4a5c-a34f-122969c5d9f0.png";
+const aboutImg = "/images/about-bg.jpg";
 const arrowIcon =
-  "https://www.figma.com/api/mcp/asset/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
+  "/images/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-0 overflow-hidden">
   <!-- Stack on mobile, side-by-side on md+ -->
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
-    <div
-      class="bg-[rgba(217,217,217,0.1)] flex flex-col justify-center px-6 sm:px-8 md:px-10 py-10 sm:py-12 order-2 md:order-1"
-    >
+    <ScrollReveal client:visible direction="left" className="bg-[rgba(217,217,217,0.1)] flex flex-col justify-center px-6 sm:px-8 md:px-10 py-10 sm:py-12 order-2 md:order-1 h-full">
       <h2
         class="font-bold text-xl sm:text-2xl uppercase leading-snug text-black mb-3 sm:mb-4"
       >
@@ -32,15 +30,15 @@ const arrowIcon =
           <img src={arrowIcon} alt="" class="w-4 h-4 rotate-180" />
         </a>
       </div>
-    </div>
+    </ScrollReveal>
 
     <!-- Image: fixed height on mobile/tablet, stretches to match text col on md+ -->
-    <div class="order-1 md:order-2 h-64 sm:h-80 md:h-auto min-h-0">
+    <ScrollReveal client:visible direction="right" className="order-1 md:order-2 h-64 sm:h-80 md:h-auto min-h-0">
       <img
         src={aboutImg}
         alt="About Hearst Book Publishing"
         class="w-full h-full object-cover"
       />
-    </div>
+    </ScrollReveal>
   </div>
 </section>

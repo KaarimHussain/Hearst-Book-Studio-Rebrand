@@ -6,18 +6,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 
 const publishedBooks = [
-  { cover: "https://www.figma.com/api/mcp/asset/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.png", title: "I Am a Girl", author: "Pamela Avis Harry" },
-  { cover: "https://www.figma.com/api/mcp/asset/1cf44384-1ec3-49b2-9c5d-846fbcdaa830.png", title: "The Well of Hope: Bloodlines", author: "Angel Mercado" },
-  { cover: "https://www.figma.com/api/mcp/asset/38460aab-76de-4414-8798-d43cf42be03a.png", title: "Caught in the Horizon", author: "J. L. Schaffer" },
-  { cover: "https://www.figma.com/api/mcp/asset/e8db65d7-5b00-4573-bd85-77cc2bfd587d.png", title: "The Kingdom", author: "Sherrie Campbell" },
-  { cover: "https://www.figma.com/api/mcp/asset/b19b18fc-1dcc-4307-b446-fddb5af0f9e1.png", title: "Universe Mission", author: "Jeremy Tim" },
+  { cover: "/images/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.webp", title: "I Am a Girl", author: "Pamela Avis Harry" },
+  { cover: "/images/1cf44384-1ec3-49b2-9c5d-846fbcdaa830.webp", title: "The Well of Hope: Bloodlines", author: "Angel Mercado" },
+  { cover: "/images/38460aab-76de-4414-8798-d43cf42be03a.webp", title: "Caught in the Horizon", author: "J. L. Schaffer" },
+  { cover: "/images/e8db65d7-5b00-4573-bd85-77cc2bfd587d.webp", title: "The Kingdom", author: "Sherrie Campbell" },
+  { cover: "/images/b19b18fc-1dcc-4307-b446-fddb5af0f9e1.webp", title: "Universe Mission", author: "Jeremy Tim" },
 ];
 
 const comingSoonBooks = [
-  { cover: "https://www.figma.com/api/mcp/asset/cbd11d27-987c-43f2-8409-a61b6d7414b8.png", title: "Coming Title One", author: "Author Name" },
-  { cover: "https://www.figma.com/api/mcp/asset/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.png", title: "Coming Title Two", author: "Author Name" },
+  { cover: "/images/cbd11d27-987c-43f2-8409-a61b6d7414b8.webp", title: "Coming Title One", author: "Author Name" },
+  { cover: "/images/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.webp", title: "Coming Title Two", author: "Author Name" },
 ];
 
 export default function BooksSection() {
@@ -26,7 +27,7 @@ export default function BooksSection() {
 
   return (
     <section className="py-10 sm:py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <ScrollReveal direction="left" className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
           Book Publishing Coming Soon
         </h2>
@@ -72,7 +73,7 @@ export default function BooksSection() {
             Coming Soon
           </button>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

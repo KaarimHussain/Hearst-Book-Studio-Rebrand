@@ -1,46 +1,56 @@
 ---
 const instagram =
-  "https://www.figma.com/api/mcp/asset/0ed92d7c-78c9-401c-8ac3-2e6271c74367.svg";
+  "/images/0ed92d7c-78c9-401c-8ac3-2e6271c74367.svg";
 const facebook =
-  "https://www.figma.com/api/mcp/asset/fc791c87-d6d1-4b56-b5c2-53193c7355dd.svg";
+  "/images/fc791c87-d6d1-4b56-b5c2-53193c7355dd.svg";
 const twitter =
-  "https://www.figma.com/api/mcp/asset/08c67dec-b326-4efd-8e50-20b1424efaaa.svg";
+  "/images/08c67dec-b326-4efd-8e50-20b1424efaaa.svg";
 const linkedin =
-  "https://www.figma.com/api/mcp/asset/9c8bd4ab-ca30-4e60-ab65-9843809daca0.svg";
+  "/images/9c8bd4ab-ca30-4e60-ab65-9843809daca0.svg";
 
 const quickLinks = [
-  "Home",
-  "About Us",
-  "Services",
-  "Packages",
-  "Portfolio",
-  "Contact",
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Packages", href: "/packages" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Contact", href: "/contact" },
 ];
-const category = ["Book Editing", "Proofing", "Content"];
-const customerService = ["Login", "Contact Us", "FAQs", "Delivery Dates"];
-const aboutLinks = ["Privacy Policy", "Terms and Condition", "Cookie Policy"];
+const category = [
+  { name: "Book Editing", href: "/services/book-editing" },
+  { name: "Proofing", href: "/services/proofreading" },
+  { name: "Book Format", href: "/services/book-format" },
+];
+const aboutLinks = [
+  { name: "Privacy Policy", href: "#" },
+  { name: "Terms and Condition", href: "#" },
+  { name: "Cookie Policy", href: "#" },
+];
 const socials = [instagram, facebook, twitter, linkedin];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <footer class="bg-white pt-6 pb-4">
   <div class="max-w-9xl mx-auto px-4 sm:px-6 relative overflow-hidden">
     <div
-      class="bg-black rounded-2xl px-5 sm:px-8 lg:px-10 py-8 sm:py-10 overflow-hidden"
+      class="bg-black rounded-2xl px-5 sm:px-8 lg:px-10 py-8 sm:py-10 overflow-hidden relative"
     >
       <!-- Watermark -->
-      <p
-        class="absolute -bottom-0 md:-bottom-10 inset-x-0 text-white opacity-[0.12] font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase leading-none whitespace-nowrap pointer-events-none select-none text-center"
-      >
-        Hearst Book Studio
-      </p>
+      <div class="absolute -bottom-0 md:-bottom-10 inset-x-0 pointer-events-none select-none text-center opacity-[0.12]">
+        <ScrollReveal client:visible direction="up" className="">
+          <p class="text-white font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase leading-none whitespace-nowrap">
+            Hearst Book Studio
+          </p>
+        </ScrollReveal>
+      </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto">
+      <ScrollReveal client:visible direction="up" className="relative z-10 max-w-7xl mx-auto">
         <!-- Top section: 4 link columns + social icons -->
         <div
           class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-0 mb-8 sm:mb-10"
         >
-          <!-- 4 columns grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 flex-1">
+          <!-- 3 columns grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 flex-1">
             <!-- Quick Links -->
             <div>
               <h4
@@ -53,10 +63,10 @@ const socials = [instagram, facebook, twitter, linkedin];
                   quickLinks.map((l) => (
                     <li>
                       <a
-                        href="#"
+                        href={l.href}
                         class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
                       >
-                        {l}
+                        {l.name}
                       </a>
                     </li>
                   ))
@@ -76,33 +86,10 @@ const socials = [instagram, facebook, twitter, linkedin];
                   category.map((l) => (
                     <li>
                       <a
-                        href="#"
+                        href={l.href}
                         class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
                       >
-                        {l}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-
-            <!-- Customer Service -->
-            <div>
-              <h4
-                class="text-white font-bold text-xs sm:text-sm leading-6 mb-3 uppercase"
-              >
-                Customer Service
-              </h4>
-              <ul>
-                {
-                  customerService.map((l) => (
-                    <li>
-                      <a
-                        href="#"
-                        class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
-                      >
-                        {l}
+                        {l.name}
                       </a>
                     </li>
                   ))
@@ -122,10 +109,10 @@ const socials = [instagram, facebook, twitter, linkedin];
                   aboutLinks.map((l) => (
                     <li>
                       <a
-                        href="#"
+                        href={l.href}
                         class="text-[#d2d2d2] text-xs leading-6 sm:leading-7 uppercase hover:text-white transition-colors block"
                       >
-                        {l}
+                        {l.name}
                       </a>
                     </li>
                   ))
@@ -211,7 +198,7 @@ const socials = [instagram, facebook, twitter, linkedin];
         </div>
         <!-- Divider -->
         <div class="border-t border-white/10 mb-7 mt-10 sm:mb-15"></div>
-      </div>
+      </ScrollReveal>
     </div>
   </div>
 </footer>

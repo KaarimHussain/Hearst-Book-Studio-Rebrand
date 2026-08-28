@@ -1,10 +1,11 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/185ac42d-bea8-4984-937b-73da1dcc0725.png";
+const photo = "/images/185ac42d-bea8-4984-937b-73da1dcc0725.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <!-- Reversed 2-col: photo left, text right -->
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -36,11 +37,11 @@ const photo = "https://www.figma.com/api/mcp/asset/185ac42d-bea8-4984-937b-73da1
         designers.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
 <!-- Full-width centered paragraph -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since 1966,
@@ -51,4 +52,4 @@ const photo = "https://www.figma.com/api/mcp/asset/185ac42d-bea8-4984-937b-73da1
     Letraset and James Mosley, the librarian at St Bride Printing Library in
     London, took a 1914 Cicero translation.
   </p>
-</div>
+</ScrollReveal>

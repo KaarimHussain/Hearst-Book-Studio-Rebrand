@@ -1,5 +1,5 @@
 ---
-const checkIcon = "https://www.figma.com/api/mcp/asset/82c01109-236c-45ff-995a-8ea53d80f311.svg";
+const checkIcon = "/images/82c01109-236c-45ff-995a-8ea53d80f311.svg";
 
 const bullets = [
   "Paperback and hardcover printing in any quantity, large or small",
@@ -11,26 +11,27 @@ const bullets = [
 
 const featureCards = [
   {
-    icon: "https://www.figma.com/api/mcp/asset/6a4b6410-34b4-4a34-94b6-0d4d482c700e.svg",
+    icon: "/images/6a4b6410-34b4-4a34-94b6-0d4d482c700e.svg",
     title: "Hardcover & Paperback Printing",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/3b809ff9-f9f6-4a11-9978-e33a9bc16f78.svg",
+    icon: "/images/3b809ff9-f9f6-4a11-9978-e33a9bc16f78.svg",
     title: "Full Colour Interior Printing",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/b9a9e404-cee1-4a15-9699-eaa651e60b9e.svg",
+    icon: "/images/b9a9e404-cee1-4a15-9699-eaa651e60b9e.svg",
     title: "Print-on-Demand Distribution",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/402f6d29-7ca4-4ad1-b0c4-4bbac9bde74c.svg",
+    icon: "/images/402f6d29-7ca4-4ad1-b0c4-4bbac9bde74c.svg",
     title: "Barcode & ISBN Ready Files",
   },
 ];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-10 sm:py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start">
 
       <!-- Left: title + checklist -->
@@ -67,5 +68,5 @@ const featureCards = [
       </div>
 
     </div>
-  </div>
+  </ScrollReveal>
 </section>

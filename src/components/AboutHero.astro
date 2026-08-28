@@ -1,6 +1,7 @@
 ---
 const bgImg =
-  "https://www.figma.com/api/mcp/asset/96be8af9-ad7a-4b1a-bfcd-da1d016a7f23.png";
+  "/images/96be8af9-ad7a-4b1a-bfcd-da1d016a7f23.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="relative w-full min-h-[80vh] flex items-end overflow-hidden">
@@ -13,9 +14,7 @@ const bgImg =
   <div class="absolute inset-0 bg-black/65"></div>
 
   <!-- Content: bottom-anchored -->
-  <div
-    class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 lg:pb-16"
-  >
+  <ScrollReveal client:visible direction="up" className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14 lg:pb-16">
     <h1
       class="text-white font-bold text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight mb-3 sm:mb-4 max-w-2xl"
     >
@@ -27,5 +26,5 @@ const bgImg =
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since 1966.
     </p>
-  </div>
+  </ScrollReveal>
 </section>

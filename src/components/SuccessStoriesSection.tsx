@@ -1,33 +1,34 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 
 const authors = [
   {
-    cover: "https://www.figma.com/api/mcp/asset/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.png",
+    cover: "/images/731e8e33-b924-4dc8-b30e-1e1dd8e604e6.webp",
     name: "Sarah Johnson",
     book: "Wings of Dawn",
     quote: "Hearst Book Publishing made my dream a reality. The support from manuscript to cover was exceptional.",
   },
   {
-    cover: "https://www.figma.com/api/mcp/asset/e8db65d7-5b00-4573-bd85-77cc2bfd587d.png",
+    cover: "/images/e8db65d7-5b00-4573-bd85-77cc2bfd587d.webp",
     name: "Jeremy Des",
     book: "Universe Within You",
     quote: "The team guided me through every step. My book is now on shelves worldwide — incredible experience.",
   },
   {
-    cover: "https://www.figma.com/api/mcp/asset/1cf44384-1ec3-49b2-9c5d-846fbcdaa830.png",
+    cover: "/images/1cf44384-1ec3-49b2-9c5d-846fbcdaa830.webp",
     name: "Marcus Reed",
     book: "The Silent Road",
     quote: "The editing team transformed my rough draft into a polished masterpiece. I couldn't be happier.",
   },
   {
-    cover: "https://www.figma.com/api/mcp/asset/38460aab-76de-4414-8798-d43cf42be03a.png",
+    cover: "/images/38460aab-76de-4414-8798-d43cf42be03a.webp",
     name: "J. L. Schaffer",
     book: "Caught in the Horizon",
     quote: "From typesetting to distribution, every step was handled professionally. Highly recommend!",
   },
   {
-    cover: "https://www.figma.com/api/mcp/asset/b19b18fc-1dcc-4307-b446-fddb5af0f9e1.png",
+    cover: "/images/b19b18fc-1dcc-4307-b446-fddb5af0f9e1.webp",
     name: "Amara Osei",
     book: "Echoes in Time",
     quote: "A world-class publishing experience. They understood my vision and brought it to life beautifully.",
@@ -62,7 +63,7 @@ export default function SuccessStoriesSection() {
 
   return (
     <section className="py-10 sm:py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <ScrollReveal direction="right" className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header row: title + CTA aligned */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-8 sm:mb-10">
@@ -162,7 +163,7 @@ export default function SuccessStoriesSection() {
           ))}
         </div>
 
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 ---
-const diagram = "https://www.figma.com/api/mcp/asset/7acb0fa4-f297-45ca-8cc7-d93bd283d8b1.svg";
+const diagram = "/images/7acb0fa4-f297-45ca-8cc7-d93bd283d8b1.svg";
 
 const steps = [
   { title: "Editing", desc: "Elevate your manuscript with our editing service that ensures every word tells your story the way you intended." },
@@ -8,10 +8,11 @@ const steps = [
   { title: "Typesetting", desc: "Expert typesetting that makes your book as easy on the eyes as it is engaging for the mind." },
   { title: "Publishing", desc: "Your literary journey culminates with our publishing service, placing your book in the spotlight it deserves." },
 ];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-10 sm:py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
       How We Work
     </h2>
@@ -61,5 +62,5 @@ const steps = [
         </div>
       ))}
     </div>
-  </div>
+  </ScrollReveal>
 </section>

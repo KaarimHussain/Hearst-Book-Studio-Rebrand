@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/1a7f6ba7-d79b-4e0a-8d16-2bf3914dabf9.png";
+const photo = "/images/1a7f6ba7-d79b-4e0a-8d16-2bf3914dabf9.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -34,10 +35,10 @@ const photo = "https://www.figma.com/api/mcp/asset/1a7f6ba7-d79b-4e0a-8d16-2bf39
         your story.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     Professional book formatting is the invisible foundation of every great reading experience. Our team
     at HearEst Book Studio applies decades of publishing expertise to ensure your manuscript flows
@@ -45,4 +46,4 @@ const photo = "https://www.figma.com/api/mcp/asset/1a7f6ba7-d79b-4e0a-8d16-2bf39
     typography, and precisely placed chapter breaks. We format for print, hardcover, ebook, and
     print-on-demand platforms so your work looks its absolute best wherever your readers find it.
   </p>
-</div>
+</ScrollReveal>

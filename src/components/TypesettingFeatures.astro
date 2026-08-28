@@ -1,5 +1,5 @@
 ---
-const checkIcon = "https://www.figma.com/api/mcp/asset/82c01109-236c-45ff-995a-8ea53d80f311.svg";
+const checkIcon = "/images/82c01109-236c-45ff-995a-8ea53d80f311.svg";
 
 const bullets = [
   "Expert font selection and pairing tailored to your genre and audience",
@@ -11,26 +11,27 @@ const bullets = [
 
 const featureCards = [
   {
-    icon: "https://www.figma.com/api/mcp/asset/871f081f-72a5-4b86-8912-ef3860b1bcb5.svg",
+    icon: "/images/871f081f-72a5-4b86-8912-ef3860b1bcb5.svg",
     title: "Print & Hardcover Interiors",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/d594e056-6435-4cab-98c2-22fdf0ff1c4b.svg",
+    icon: "/images/d594e056-6435-4cab-98c2-22fdf0ff1c4b.svg",
     title: "Ebook & Reflowable Layouts",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/3fe3aca4-cdb5-444b-bfe2-49cfc723c4c4.svg",
+    icon: "/images/3fe3aca4-cdb5-444b-bfe2-49cfc723c4c4.svg",
     title: "Print-on-Demand Compliance",
   },
   {
-    icon: "https://www.figma.com/api/mcp/asset/c3e1af2b-f81c-4f6e-b5ad-f2bc1d4d4959.svg",
+    icon: "/images/c3e1af2b-f81c-4f6e-b5ad-f2bc1d4d4959.svg",
     title: "Genre-Specific Typography",
   },
 ];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-10 sm:py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start">
 
       <!-- Left: title + checklist -->
@@ -67,5 +68,5 @@ const featureCards = [
       </div>
 
     </div>
-  </div>
+  </ScrollReveal>
 </section>

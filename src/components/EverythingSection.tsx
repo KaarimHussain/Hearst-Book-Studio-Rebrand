@@ -4,8 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 
-const msgIcon = "https://www.figma.com/api/mcp/asset/945932cf-746a-425c-8221-85b6bf1fff4a.svg";
+const msgIcon = "/images/945932cf-746a-425c-8221-85b6bf1fff4a.svg";
 
 const faqs = [
   {
@@ -33,7 +34,7 @@ const faqs = [
 export default function EverythingSection() {
   return (
     <section className="py-10 sm:py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <ScrollReveal direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
           Everything You Need To Know
         </h2>
@@ -76,7 +77,7 @@ export default function EverythingSection() {
             </a>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

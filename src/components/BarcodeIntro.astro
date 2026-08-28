@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/5c7bd7a1-c638-430e-ab74-a29f4ae79724.png";
+const photo = "/images/5c7bd7a1-c638-430e-ab74-a29f4ae79724.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -34,10 +35,10 @@ const photo = "https://www.figma.com/api/mcp/asset/5c7bd7a1-c638-430e-ab74-a29f4
         your books are properly registered and ready for global commerce.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     An ISBN is more than just a number — it is the key that unlocks your book's presence in bookstores,
     libraries, and online retailers worldwide. HearEst Book Studio takes the guesswork out of registration
@@ -45,4 +46,4 @@ const photo = "https://www.figma.com/api/mcp/asset/5c7bd7a1-c638-430e-ab74-a29f4
     barcodes for your back cover, and ensuring your title metadata is correctly entered into global
     databases. With our barcode and ISBN service, your book is retail-ready from the very first print run.
   </p>
-</div>
+</ScrollReveal>

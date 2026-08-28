@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
-const logo = "https://www.figma.com/api/mcp/asset/59b2e986-5744-4913-ba3d-18954a833206.png";
-const arrowIcon = "https://www.figma.com/api/mcp/asset/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
+const logo = "/images/59b2e986-5744-4913-ba3d-18954a833206.webp";
+const arrowIcon = "/images/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
 
 const serviceItems = [
   { label: "Book Publishing", href: "/services/book-publishing" },

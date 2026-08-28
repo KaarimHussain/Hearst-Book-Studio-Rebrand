@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/010e15bf-cf68-4e42-a44e-daab21cd12f8.png";
+const photo = "/images/010e15bf-cf68-4e42-a44e-daab21cd12f8.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -34,10 +35,10 @@ const photo = "https://www.figma.com/api/mcp/asset/010e15bf-cf68-4e42-a44e-daab2
         digital, and audio formats.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     Publishing a book is one of the most rewarding experiences an author can undertake — and with the right
     partner, it doesn't have to be overwhelming. HearEst Book Studio provides complete publishing solutions
@@ -46,4 +47,4 @@ const photo = "https://www.figma.com/api/mcp/asset/010e15bf-cf68-4e42-a44e-daab2
     Our global distribution network ensures your book is available wherever readers are looking for their next
     favourite title.
   </p>
-</div>
+</ScrollReveal>

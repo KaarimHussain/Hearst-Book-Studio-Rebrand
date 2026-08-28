@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/2aa38480-2f74-435b-95bf-c31793a1bb39.png";
+const photo = "/images/2aa38480-2f74-435b-95bf-c31793a1bb39.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -33,10 +34,10 @@ const photo = "https://www.figma.com/api/mcp/asset/2aa38480-2f74-435b-95bf-c3179
         digital-ready files on time, every time.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     Typesetting is the art of arranging type so that readers absorb your words effortlessly. At HearEst
     Book Studio, we treat every page as a canvas — selecting typefaces that match your genre, setting
@@ -44,4 +45,4 @@ const photo = "https://www.figma.com/api/mcp/asset/2aa38480-2f74-435b-95bf-c3179
     your book is a literary novel, a business guide, or a children's title, our typesetting transforms
     raw text into a publication that looks and feels truly professional.
   </p>
-</div>
+</ScrollReveal>

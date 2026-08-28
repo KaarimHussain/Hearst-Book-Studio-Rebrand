@@ -1,18 +1,19 @@
 ---
 const services = [
-  { num: "01", title: "Book Editing",  img: "https://www.figma.com/api/mcp/asset/3d8dbdbc-59e0-43a4-a165-bea438ed9677.png" },
-  { num: "02", title: "Proofreading",  img: "https://www.figma.com/api/mcp/asset/a71d8191-2f58-41cc-bd59-b12d10b3b7bf.png" },
-  { num: "03", title: "Book Format",   img: "https://www.figma.com/api/mcp/asset/d70e365d-9ed9-42df-8518-a5397562f3e2.png" },
-  { num: "04", title: "Typesetting",   img: "https://www.figma.com/api/mcp/asset/4599a98e-909b-49ab-a21c-2c40f9001dcf.png" },
-  { num: "05", title: "Book Publish",  img: "https://www.figma.com/api/mcp/asset/e5ca6d60-16de-4a0d-98f4-5a267bc99282.png" },
-  { num: "06", title: "Print",         img: "https://www.figma.com/api/mcp/asset/c6ded3f3-c353-431e-8d4f-28040078be18.png" },
-  { num: "07", title: "Audio Book",    img: "https://www.figma.com/api/mcp/asset/886d2e42-1730-4558-b9e0-a9c24c4b823e.png" },
-  { num: "08", title: "Barcode",       img: "https://www.figma.com/api/mcp/asset/f4f4c968-9905-4fe6-ad52-ff239531cd13.png" },
+  { num: "01", title: "Book Editing",  img: "/images/3d8dbdbc-59e0-43a4-a165-bea438ed9677.webp" },
+  { num: "02", title: "Proofreading",  img: "/images/a71d8191-2f58-41cc-bd59-b12d10b3b7bf.webp" },
+  { num: "03", title: "Book Format",   img: "/images/d70e365d-9ed9-42df-8518-a5397562f3e2.webp" },
+  { num: "04", title: "Typesetting",   img: "/images/4599a98e-909b-49ab-a21c-2c40f9001dcf.webp" },
+  { num: "05", title: "Book Publish",  img: "/images/e5ca6d60-16de-4a0d-98f4-5a267bc99282.webp" },
+  { num: "06", title: "Print",         img: "/images/c6ded3f3-c353-431e-8d4f-28040078be18.webp" },
+  { num: "07", title: "Audio Book",    img: "/images/886d2e42-1730-4558-b9e0-a9c24c4b823e.webp" },
+  { num: "08", title: "Barcode",       img: "/images/f4f4c968-9905-4fe6-ad52-ff239531cd13.webp" },
 ];
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-10 sm:py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
     <h2 class="font-bold text-xl sm:text-2xl text-black text-center uppercase leading-tight mb-3">
       Our Publishing Services
     </h2>
@@ -47,5 +48,5 @@ const services = [
         </div>
       ))}
     </div>
-  </div>
+  </ScrollReveal>
 </section>

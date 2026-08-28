@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.tsx";
-import Hero from "../components/Hero.astro";
+import HeroCarousel from "../components/HeroCarousel.tsx";
 import BrandsSection from "../components/BrandsSection.astro";
 import AboutSection from "../components/AboutSection.astro";
 import BooksSection from "../components/BooksSection.tsx";
@@ -14,10 +14,10 @@ import EverythingSection from "../components/EverythingSection.tsx";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="HearEst Book Studio">
+<Layout title="Hearst Book Studio">
   <div class="relative">
     <Navbar client:load />
-    <Hero />
+    <HeroCarousel client:load />
   </div>
   <BrandsSection />
   <AboutSection />

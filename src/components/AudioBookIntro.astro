@@ -1,9 +1,10 @@
 ---
-const photo = "https://www.figma.com/api/mcp/asset/353dc79b-ae86-4917-a2be-0eca8ae63696.png";
+const photo = "/images/353dc79b-ae86-4917-a2be-0eca8ae63696.webp";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
 ---
 
 <section class="py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
+  <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
 
     <!-- Left: photo -->
     <div class="h-64 sm:h-80 md:h-auto min-h-0 order-1">
@@ -34,10 +35,10 @@ const photo = "https://www.figma.com/api/mcp/asset/353dc79b-ae86-4917-a2be-0eca8
         major platform — including Audible, Apple Books, and Spotify.
       </p>
     </div>
-  </div>
+  </ScrollReveal>
 </section>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+<ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
   <p class="text-[#555] text-xs sm:text-sm leading-relaxed text-center">
     Audio books are one of the fastest-growing formats in publishing, and HearEst Book Studio gives you
     everything you need to compete in this exciting space. We match each manuscript with a narrator whose
@@ -45,4 +46,4 @@ const photo = "https://www.figma.com/api/mcp/asset/353dc79b-ae86-4917-a2be-0eca8
     deliver broadcast-quality masters ready for immediate upload. Our team also manages all metadata,
     chapter markers, and platform submissions so your audio book is discoverable from day one.
   </p>
-</div>
+</ScrollReveal>

@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.tsx";
+import InnerPageHero from "../components/InnerPageHero.astro";
+import ContactForm from "../components/ContactForm.tsx";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import EverythingSection from "../components/EverythingSection.tsx";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Contact Us — Hearst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero 
+      bgImg="/images/contact-bg.jpg"
+      heading="LET'S DISCUSS YOUR PROJECT"
+      subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966."
+    />
+  </div>
+
+  <ContactForm client:visible />
+
+  <WhyChooseUs
+    bgImg="/images/c77ab02d-b5e9-4632-8e67-321380a8d826.webp"
+    bookImg="/images/fb851f5d-5fd0-44ba-8b86-7f36f9eb37d7.webp"
+  />
+
+  <EverythingSection client:load />
+  
+  <Footer />
+</Layout>
