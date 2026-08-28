@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import InnerPageHero from "../../components/InnerPageHero.astro";
+import BarcodeIntro from "../../components/BarcodeIntro.astro";
+import BarcodeFeatures from "../../components/BarcodeFeatures.astro";
+import HowWeWork from "../../components/HowWeWork.astro";
+import WhyChooseUs from "../../components/WhyChooseUs.astro";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="ISBN & Barcode — HearEst Book Studio">
+  <div class="relative">
+    <Navbar client:load />
+    <InnerPageHero
+      bgImg="https://www.figma.com/api/mcp/asset/35746e6b-8eef-461e-935b-572f53fbb062.png"
+      heading="Register Your Book's Identity with Confidence!"
+    />
+  </div>
+
+  <BarcodeIntro />
+  <BarcodeFeatures />
+  <HowWeWork />
+
+  <WhyChooseUs
+    bgImg="https://www.figma.com/api/mcp/asset/05edc24b-0f3b-4321-bdb0-2f353eaa2b68.png"
+    bookImg="https://www.figma.com/api/mcp/asset/bc7d7751-afdc-4f52-8a2d-58053a5cc36f.png"
+  />
+
+  <EverythingSection client:load />
+  <Footer />
+</Layout>
