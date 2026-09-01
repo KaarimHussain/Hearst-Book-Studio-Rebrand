@@ -85,7 +85,7 @@ export default function BooksSection() {
   return (
     <section className="py-12 sm:py-16 bg-white overflow-hidden">
       <ScrollReveal direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl text-black uppercase leading-tight mb-3">
@@ -101,11 +101,10 @@ export default function BooksSection() {
           <button
             type="button"
             onClick={() => setSelectedCategory("All")}
-            className={`h-9 px-4 sm:px-6 font-semibold text-xs sm:text-sm cursor-pointer select-none transition-colors duration-200 ${
-              selectedCategory === "All"
+            className={`h-9 px-4 sm:px-6 font-semibold text-xs sm:text-sm cursor-pointer select-none transition-colors duration-200 ${selectedCategory === "All"
                 ? "bg-black text-white shadow-xs"
                 : "border-2 border-black text-black bg-white hover:bg-gray-100"
-            }`}
+              }`}
           >
             All Books ({BOOKS.length})
           </button>
@@ -116,11 +115,10 @@ export default function BooksSection() {
                 type="button"
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`h-9 px-4 sm:px-6 font-semibold text-xs sm:text-sm cursor-pointer select-none transition-colors duration-200 ${
-                  selectedCategory === cat
+                className={`h-9 px-4 sm:px-6 font-semibold text-xs sm:text-sm cursor-pointer select-none transition-colors duration-200 ${selectedCategory === cat
                     ? "bg-black text-white shadow-xs"
                     : "border-2 border-black text-black bg-white hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {cat} ({count})
               </button>

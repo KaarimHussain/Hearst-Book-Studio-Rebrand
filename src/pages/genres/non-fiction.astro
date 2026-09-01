@@ -10,108 +10,130 @@ import Footer from "../../components/Footer.astro";
   <div class="relative bg-black text-white">
     <Navbar client:load />
 
-    {/* SECTION 1: Hero Cover Section */}
+    {/* SECTION 1: Authoritative Editorial Hero */}
     <section 
       class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
       style="background-image: url('/images/genre/non-fiction/section-1.png');"
     >
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/65 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-black/80 pointer-events-none"></div>
 
-      <div class="relative z-10 max-w-5xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-[#3075ba]/30 border border-[#3075ba]/50 px-4 py-1.5 mb-6">
-          <span class="w-2 h-2 rounded-full bg-[#3075ba]"></span>
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
-            NON-FICTION & EXPERT PUBLISHING
-          </span>
+      <div class="relative z-10 max-w-6xl mx-auto">
+        <div class="text-left max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 bg-[#3075ba]/20 border border-[#3075ba]/50 px-4 py-1.5 mb-6">
+            <span class="w-2 h-2 bg-[#3075ba]"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
+              NON-FICTION & SCHOLARLY PUBLISHING
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
+            FACTUAL RIGOR, RESEARCH & <span class="text-[#3075ba]">EDITORIAL AUTHORITY</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium leading-relaxed mb-8 drop-shadow-md">
+            From investigative journalism and historical accounts to scientific studies, memoirs, and political commentary, Hearst Book Studio turns research into landmark non-fiction literature.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="#non-fiction-showcase"
+              class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+            >
+              <span>Explore Non-Fiction Books</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a
+              href="/contact"
+              class="h-12 px-8 bg-white/10 text-white font-bold text-xs uppercase tracking-widest border border-white/30 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+            >
+              <span>Submit Manuscript Proposal</span>
+            </a>
+          </div>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
-          TRANSFORM REAL KNOWLEDGE INTO <span class="text-[#3075ba]">AUTHORITATIVE BOOKS</span>
-        </h1>
-
-        <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
-          From executive business guides and memoirs to self-improvement bestsellers and technical manuals, Hearst Book Studio transforms expert knowledge into polished, market-ready non-fiction publications.
-        </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#non-fiction-showcase"
-            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
-          >
-            <span>Explore Non-Fiction Catalogue</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-          <a
-            href="/contact"
-            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
-          >
-            <span>Publish Your Work</span>
-          </a>
+        {/* Analytical Ticker Bar */}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/15 bg-black/60 p-5 border border-white/10">
+          <div class="border-r border-white/10 last:border-0 pr-4">
+            <div class="text-xl font-bold text-[#3075ba]">100% Fact-Checked</div>
+            <div class="text-[10px] text-gray-300 font-medium uppercase tracking-wider mt-1">Citation Verification</div>
+          </div>
+          <div class="border-r border-white/10 last:border-0 pr-4">
+            <div class="text-xl font-bold text-[#3075ba]">Peer Reviewed</div>
+            <div class="text-[10px] text-gray-300 font-medium uppercase tracking-wider mt-1">Editorial Quality</div>
+          </div>
+          <div class="border-r border-white/10 last:border-0 pr-4">
+            <div class="text-xl font-bold text-[#3075ba]">Global Indexing</div>
+            <div class="text-[10px] text-gray-300 font-medium uppercase tracking-wider mt-1">Library & Retail Access</div>
+          </div>
+          <div>
+            <div class="text-xl font-bold text-[#3075ba]">Index & Citations</div>
+            <div class="text-[10px] text-gray-300 font-medium uppercase tracking-wider mt-1">Full Footnote Support</div>
+          </div>
         </div>
       </div>
     </section>
 
-    {/* SECTION 2: Non-Fiction Pillars */}
+    {/* SECTION 2: Research & Analytical Pillars */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
       style="background-image: url('/images/genre/non-fiction/section-2.png');"
     >
-      <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
-            PRECISION & FACTUAL INTEGRITY
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            RESEARCH & EDITORIAL STANDARDS
           </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
-            ENGINEERED FOR AUTHORITY & IMPACT
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            RIGOROUS NON-FICTION PUBLISHING
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
-              01
+          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-mono">
+              [STANDARD 01]
             </div>
-            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
-              Ghostwriting & Research Synthesis
+            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
+              Fact-Checking & Citation Indexing
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Collaborate with expert non-fiction ghostwriters to translate your ideas, interviews, and corporate data into a cohesive, articulate book draft.
+              Thorough verification of historical dates, scientific references, interview transcripts, footnotes, and bibliographic citations.
             </p>
           </div>
 
-          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
-              02
+          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-mono">
+              [STANDARD 02]
             </div>
-            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
-              Fact-Checking & Citation Verification
+            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
+              Data & Infographic Vectorization
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Rigorous editorial proofing, citation cross-checking, footnote formatting, and index generation for academic, corporate, and historical manuscripts.
+              Converting complex data sets into clean charts, geographical maps, timelines, and analytical diagrams for print.
             </p>
           </div>
 
-          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
-              03
+          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-mono">
+              [STANDARD 03]
             </div>
-            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
-              Thought Leadership Positioning
+            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
+              Academic & Retail Distribution
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Strategic distribution designed to position authors as industry leaders, keynote speakers, and subject matter experts in business and media.
+              Listing across university libraries, academic distributors, Amazon, IngramSpark, and major retail bookstore chains.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    {/* SECTION 3: Curated Non-Fiction Portfolio Showcase */}
+    {/* SECTION 3: Showcase */}
     <section 
       id="non-fiction-showcase"
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
@@ -121,14 +143,14 @@ import Footer from "../../components/Footer.astro";
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
-            OUR FEATURED NON-FICTION CATALOGUE
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            NON-FICTION CATALOGUE
           </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
-            EXPLORE PUBLISHED NON-FICTION TITLES
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            EXPLORE PUBLISHED NON-FICTION BOOKS
           </h2>
           <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
-            Browse our curated showcase of business, self-help, technology, and leadership titles.
+            Search history, business, self-help, and technology works.
           </p>
         </div>
 
@@ -136,7 +158,7 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 4: Sub-Categories Specialization */}
+    {/* SECTION 4: Subject Areas */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
       style="background-image: url('/images/genre/non-fiction/section-4.png');"
@@ -145,11 +167,11 @@ import Footer from "../../components/Footer.astro";
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
-            SUBJECT MATTER EXPERTISE
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            NON-FICTION SUBJECT AREAS
           </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
-            NON-FICTION DOMAINS WE SPECIALIZE IN
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            SUBJECTS WE PUBLISH
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
@@ -157,33 +179,33 @@ import Footer from "../../components/Footer.astro";
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              title: "Business, Strategy & Startups",
-              desc: "Corporate management, entrepreneurial frameworks, venture strategy, and economic leadership.",
+              title: "History & Historical Accounts",
+              desc: "Deeply researched historical narratives, military histories, world events, and archives.",
             },
             {
-              title: "Self-Help & Personal Growth",
-              desc: "Habit formation, mental health, productivity systems, mindfulness, and personal finance.",
+              title: "Science, Tech & Environment",
+              desc: "Pop-science books, environmental studies, AI technology, and space exploration works.",
             },
             {
-              title: "Technology & Computer Science",
-              desc: "Software architecture, AI, data infrastructure, programming guides, and tech innovation.",
+              title: "Politics, Society & Current Affairs",
+              desc: "Sociological analyses, geopolitical studies, public policy books, and investigative journalism.",
             },
             {
-              title: "Memoirs & Autobiographies",
-              desc: "Authentic personal narratives, executive memoirs, historical recollections, and inspiring life stories.",
+              title: "True Crime & Investigative Journalism",
+              desc: "Exhaustive true crime accounts, court case breakdowns, and investigative exposés.",
             },
             {
-              title: "Health, Wellness & Science",
-              desc: "Evidence-based health guides, medical science, nutrition, and psychology publications.",
+              title: "Philosophy, Psychology & Ethics",
+              desc: "Cognitive psychology, moral philosophy, behavioral economics, and human behavior.",
             },
             {
-              title: "History, Politics & Culture",
-              desc: "In-depth historical analysis, political commentary, cultural studies, and investigative journalism.",
+              title: "Memoir & Narrative Non-Fiction",
+              desc: "Personal memoirs written with journalistic accuracy and compelling storytelling.",
             },
           ].map((item, idx) => (
             <div key={idx} class="bg-black/60 border border-white/15 p-6 sm:p-7 hover:border-[#3075ba] transition-colors">
-              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2">
-                Domain #{idx + 1}
+              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2 font-mono">
+                Subject #{idx + 1}
               </div>
               <h3 class="font-extrabold text-base sm:text-lg text-white uppercase mb-2">
                 {item.title}
@@ -197,7 +219,7 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 5: Publishing Roadmap */}
+    {/* SECTION 5: Research Roadmap */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
       style="background-image: url('/images/genre/non-fiction/section-5.png');"
@@ -206,11 +228,11 @@ import Footer from "../../components/Footer.astro";
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
-            EXECUTIVE PUBLISHING PROCESS
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            4-STEP EDITORIAL AUDIT
           </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
-            THE NON-FICTION AUTHOR ROADMAP
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            THE NON-FICTION PUBLISHING ROADMAP
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
@@ -219,23 +241,23 @@ import Footer from "../../components/Footer.astro";
           {[
             {
               step: "PHASE 01",
-              title: "Outline & Ghostwriting",
-              desc: "Structuring chapter outlines, conducting author interviews, or polishing raw draft materials.",
+              title: "Manuscript Proposal",
+              desc: "Auditing non-fiction proposals, outline structures, target audience, and competitive titles.",
             },
             {
               step: "PHASE 02",
-              title: "Editorial & Fact-Check",
-              desc: "Comprehensive line editing, technical accuracy verification, citations, and index creation.",
+              title: "Fact-Check & Editing",
+              desc: "Verifying dates, references, footnotes, and performing deep developmental editing.",
             },
             {
               step: "PHASE 03",
-              title: "Executive Interior Design",
-              desc: "Clean interior typography, charts, callouts, tables, and professional cover branding.",
+              title: "Typesetting & Indexing",
+              desc: "Designing authoritative cover artwork, clean body text typesetting, and subject index creation.",
             },
             {
               step: "PHASE 04",
-              title: "Distribution & Launch",
-              desc: "Global Amazon, IngramSpark, and bookstore distribution with press release support.",
+              title: "Global Distribution",
+              desc: "Releasing across Amazon, IngramSpark, Barnes & Noble, and academic distribution channels.",
             },
           ].map((item, idx) => (
             <div key={idx} class="bg-black/65 border border-white/20 p-6 relative group hover:border-[#3075ba] transition-colors">
@@ -254,36 +276,36 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 6: Author Call-To-Action Banner */}
+    {/* SECTION 6: Editorial CTA */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
       style="background-image: url('/images/genre/non-fiction/section-6.png');"
     >
-      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-slate-950/60 to-black/70 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-slate-950/70 to-black/80 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3 drop-shadow-sm">
-          PUBLISH YOUR KNOWLEDGE TODAY
+        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3">
+          PUBLISH YOUR RESEARCH & KNOWLEDGE WORLDWIDE
         </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6 drop-shadow-md">
-          READY TO BECOME A PUBLISHED THOUGHT LEADER?
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
+          READY TO PUBLISH YOUR NON-FICTION BOOK?
         </h2>
         <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Schedule a consultation with our non-fiction publishing strategists to receive a free manuscript review and tailored publishing proposal.
+          Speak with our senior non-fiction editors to receive a free manuscript review and publication roadmap.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a
             href="/contact"
-            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
           >
             <span>Request Free Manuscript Review</span>
           </a>
           <a
             href="/packages"
-            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+            class="h-12 px-8 bg-white/10 text-white font-bold text-xs uppercase tracking-widest border border-white/30 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
           >
-            <span>Explore Publishing Packages</span>
+            <span>View Non-Fiction Packages</span>
           </a>
         </div>
       </div>

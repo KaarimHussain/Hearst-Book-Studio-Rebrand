@@ -19,12 +19,12 @@ const genreItems = [
   { label: "Non-Fiction",                   href: "/genres/non-fiction" },
   { label: "Children's Book",               href: "/genres/childrens-book" },
   { label: "Self-Help",                     href: "/genres/self-help" },
-  { label: "Art & Illustration",            href: "/portfolio" },
-  { label: "Religious Publishing",          href: "/portfolio" },
-  { label: "Inspirational",                 href: "/portfolio" },
-  { label: "Comic Book",                    href: "/portfolio" },
-  { label: "Biographies & Autobiographies", href: "/portfolio" },
-  { label: "Business",                      href: "/portfolio" },
+  { label: "Art & Illustration",            href: "/genres/art-and-illustrations" },
+  { label: "Religious Publishing",          href: "/genres/religious-publishing" },
+  { label: "Inspirational",                 href: "/genres/inspirational" },
+  { label: "Comic Book",                    href: "/genres/comic-book" },
+  { label: "Biographies & Autobiographies", href: "/genres/biographies-and-autobiographies" },
+  { label: "Business",                      href: "/genres/business" },
 ];
 
 export default function Navbar() {
@@ -119,7 +119,7 @@ export default function Navbar() {
             onMouseLeave={scheduleClose}
           >
             <a
-              href="/portfolio"
+              href="/genres"
               className="flex items-center gap-1 text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
             >
               Genres
@@ -254,7 +254,7 @@ export default function Navbar() {
           {/* Genres mobile section */}
           <div>
             <div className="flex items-center justify-between border-b border-white/10">
-              <a href="/portfolio" className="py-3 text-white font-semibold text-sm flex-1">
+              <a href="/genres" className="py-3 text-white font-semibold text-sm flex-1">
                 Genres
               </a>
               <button

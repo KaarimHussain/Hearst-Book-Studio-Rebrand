@@ -1,0 +1,332 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import BusinessShowcase from "../../components/BusinessShowcase.tsx";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Business & Executive Publishing — Hearst Book Studio">
+  <div class="relative bg-black text-white">
+    <Navbar client:load />
+
+    {/* SECTION 1: Corporate Executive Hero */}
+    <section 
+      class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/images/genre/business/section-1.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-6xl mx-auto">
+        <div class="text-center max-w-4xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-2 bg-[#3075ba]/20 border border-[#3075ba]/50 px-4 py-1.5 mb-6">
+            <span class="w-2.5 h-2.5 bg-[#3075ba]"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
+              EXECUTIVE & CORPORATE PUBLISHING
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
+            TURN YOUR CORPORATE EXPERTISE INTO <span class="text-[#3075ba]">AN INDUSTRY-DEFINING BOOK</span>
+          </h1>
+
+          <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 drop-shadow-md">
+            From C-Suite leadership frameworks and startup scale-up playbooks to economic analysis and founder memoirs, Hearst Book Studio builds authority for executives and enterprise leaders.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#business-showcase"
+              class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+            >
+              <span>Explore Business Catalogue</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a
+              href="/contact"
+              class="h-12 px-8 bg-white/10 text-white font-bold text-xs uppercase tracking-widest border border-white/30 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+            >
+              <span>Schedule Executive Briefing</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Executive Metric Bar (Unique to Business) */}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/15 bg-black/60 p-6 border border-[#3075ba]/30">
+          <div class="text-center border-r border-white/10 last:border-0">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#3075ba]">500+</div>
+            <div class="text-[10px] text-gray-300 font-semibold uppercase tracking-wider mt-1">Executive Authors</div>
+          </div>
+          <div class="text-center border-r border-white/10 last:border-0">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#3075ba]">#1 Bestsellers</div>
+            <div class="text-[10px] text-gray-300 font-semibold uppercase tracking-wider mt-1">Amazon & WSJ Lists</div>
+          </div>
+          <div class="text-center border-r border-white/10 last:border-0">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#3075ba]">100% Retained</div>
+            <div class="text-[10px] text-gray-300 font-semibold uppercase tracking-wider mt-1">Copyright Ownership</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-extrabold text-[#3075ba]">Global Press</div>
+            <div class="text-[10px] text-gray-300 font-semibold uppercase tracking-wider mt-1">Media Distribution</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2: Asymmetric Executive Pillars */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/business/section-2.png');"
+    >
+      <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left Column: Corporate Strategy Box */}
+          <div class="w-full lg:w-5/12 bg-black/75 border border-[#3075ba] p-8 sm:p-10">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+              AUTHORITY AS A BUSINESS ASSET
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white mb-4">
+              WHY TOP EXECUTIVES WRITE BOOKS
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal mb-6">
+              A published business book is the ultimate credibility multiplier. It unlocks keynote speaking invitations, higher consulting retainers, inbound enterprise leads, and national press coverage.
+            </p>
+            <div class="space-y-3">
+              {[
+                "Keynote & Paid Speaking Opportunities",
+                "High-Ticket Enterprise Client Acquisition",
+                "Personal Brand & Board Position Credibility",
+                "Turnkey Corporate Bulk Purchase Orders",
+              ].map((bullet, i) => (
+                <div key={i} class="flex items-center gap-3 text-xs font-semibold text-gray-100">
+                  <span class="w-1.5 h-1.5 bg-[#3075ba]"></span>
+                  <span>{bullet}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: 3 Horizontal Corporate Cards */}
+          <div class="w-full lg:w-7/12 space-y-4">
+            {[
+              {
+                num: "01",
+                title: "Ghostwriting from Strategy Decks",
+                desc: "Our senior business editors extract your methodologies from interviews, whitepapers, and keynotes—saving you hundreds of hours.",
+              },
+              {
+                num: "02",
+                title: "Corporate Chart & Graphic Formatting",
+                desc: "High-resolution vectorization of business models, framework diagrams, financial charts, and clean corporate typography.",
+              },
+              {
+                num: "03",
+                title: "Wall Street Journal & Amazon Campaign",
+                desc: "Targeted bestseller launch campaigns structured to place your title directly into executive hands worldwide.",
+              },
+            ].map((card, idx) => (
+              <div key={idx} class="bg-black/70 border border-white/20 p-6 flex items-start gap-6 hover:border-[#3075ba] transition-colors">
+                <div class="text-2xl font-extrabold text-[#3075ba] border-r border-white/20 pr-6">
+                  {card.num}
+                </div>
+                <div>
+                  <h3 class="font-bold text-base text-white uppercase mb-1">
+                    {card.title}
+                  </h3>
+                  <p class="text-xs text-gray-200 leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3: Interactive Showcase */}
+    <section 
+      id="business-showcase"
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/business/section-3.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            EXECUTIVE PORTFOLIO
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            EXPLORE PUBLISHED BUSINESS BOOKS
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
+            Search leadership, economics, startup playbooks, and strategy bestsellers.
+          </p>
+        </div>
+
+        <BusinessShowcase client:load />
+      </div>
+    </section>
+
+    {/* SECTION 4: Corporate Domains Grid */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/business/section-4.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            CORPORATE PUBLISHING DOMAINS
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            BUSINESS DOMAINS WE PUBLISH
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Executive Leadership & Management",
+              desc: "CEO playbooks, organizational culture, team alignment, and strategic execution.",
+            },
+            {
+              title: "Startups & Venture Capital",
+              desc: "Fundraising strategies, product-market fit, growth hacking, and scaling frameworks.",
+            },
+            {
+              title: "Finance, Investing & Economics",
+              desc: "Personal finance, real estate investing, global markets, and macroeconomic analysis.",
+            },
+            {
+              title: "Sales, Marketing & Branding",
+              desc: "B2B sales funnels, digital marketing, brand positioning, and customer acquisition.",
+            },
+            {
+              title: "Tech Innovation & AI Business",
+              desc: "Artificial intelligence integration, SaaS operations, and digital business transformation.",
+            },
+            {
+              title: "Operations & Supply Chain",
+              desc: "Lean manufacturing, process optimization, logistics, and operational efficiency.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/60 border border-white/15 p-6 sm:p-7 hover:border-[#3075ba] transition-colors">
+              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2">
+                Domain #{idx + 1}
+              </div>
+              <h3 class="font-extrabold text-base sm:text-lg text-white uppercase mb-2">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5: Executive Stage-Gate Roadmap */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/business/section-5.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
+            STAGE-GATE EXECUTIVE PROCESS
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+            THE BUSINESS PUBLISHING ROADMAP
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              step: "STAGE 01",
+              title: "Framework Mapping",
+              desc: "Structuring your business thesis, case studies, and proprietary methodology.",
+            },
+            {
+              step: "STAGE 02",
+              title: "Executive Editing",
+              desc: "Developmental editing, data verification, chart vectorization, and citation formatting.",
+            },
+            {
+              step: "STAGE 03",
+              title: "Corporate Design",
+              desc: "Authoritative hardcover casing, clean corporate typography, and ISBN registration.",
+            },
+            {
+              step: "STAGE 04",
+              title: "Enterprise Launch",
+              desc: "Amazon Bestseller campaign, Audible recording, and corporate bulk distribution.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/70 border border-white/20 p-6 relative group hover:border-[#3075ba] transition-colors">
+              <span class="text-[10px] font-extrabold text-[#3075ba] uppercase tracking-widest block mb-2">
+                {item.step}
+              </span>
+              <h3 class="font-extrabold text-base text-white uppercase mb-3">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed font-normal">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6: Corporate Executive CTA */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
+      style="background-image: url('/images/genre/business/section-6.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-slate-950/70 to-black/80 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3">
+          BUILD AUTHORITY & EXPAND ENTERPRISE INFLUENCE
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
+          READY TO PUBLISH YOUR BUSINESS METHODOLOGY?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Schedule a private consultation with our corporate publishing directors to receive a manuscript audit and custom bestseller release strategy.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+          >
+            <span>Request Executive Briefing</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-12 px-8 bg-white/10 text-white font-bold text-xs uppercase tracking-widest border border-white/30 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+          >
+            <span>View Business Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <EverythingSection client:load />
+    <Footer />
+  </div>
+</Layout>

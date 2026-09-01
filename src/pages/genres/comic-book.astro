@@ -1,0 +1,303 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import ComicShowcase from "../../components/ComicShowcase.tsx";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Comic Book & Graphic Novel Publishing — Hearst Book Studio">
+  <div class="relative bg-black text-white">
+    <Navbar client:load />
+
+    {/* SECTION 1: Dynamic Comic Hero */}
+    <section 
+      class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/images/genre/comic-book/section-1.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        {/* Comic Action Tag */}
+        <div class="inline-flex items-center gap-2 bg-[#3075ba] border-2 border-white px-4 py-1 mb-6 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+          <span class="text-xs font-black uppercase tracking-widest text-white">
+            ⚡ GRAPHIC NOVEL & COMIC STUDIO
+          </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none mb-6 drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
+          DYNAMIC PANEL ART & <span class="text-[#3075ba] bg-white/10 px-3 py-1 inline-block border-2 border-[#3075ba]">HIGH-ACTION NOVELS</span>
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
+          From superhero universes and dark fantasy graphic novels to manga and indie webcomics, Hearst Book Studio handles penciling, inking, digital coloring, lettering, and worldwide comic distribution.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#comic-showcase"
+            class="h-13 px-8 bg-[#3075ba] hover:bg-[#2560a0] text-white font-black text-sm uppercase tracking-wider transition-transform hover:-translate-y-1 inline-flex items-center gap-2 border-2 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+          >
+            <span>Explore Comic Catalogue</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a
+            href="/contact"
+            class="h-13 px-8 bg-white hover:bg-gray-100 text-black font-black text-sm uppercase tracking-wider transition-transform hover:-translate-y-1 inline-flex items-center gap-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(48,117,186,1)]"
+          >
+            <span>Publish Your Comic</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2: Comic Panel Style Grid (Unique Graphic Layout) */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t-4 border-[#3075ba]"
+      style="background-image: url('/images/genre/comic-book/section-2.png');"
+    >
+      <div class="absolute inset-0 bg-black/65 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] bg-white px-3 py-1 border border-[#3075ba] inline-block mb-3">
+            COMIC CREATION SPECIALTIES
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
+            THE GRAPHIC NOVEL PIPELINE
+          </h2>
+        </div>
+
+        {/* Comic Panel Grid */}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div class="bg-black/80 border-2 border-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_rgba(48,117,186,1)] hover:border-[#3075ba] transition-colors relative">
+            <div class="absolute -top-4 left-6 bg-[#3075ba] text-white font-black text-xs px-3 py-1 uppercase tracking-widest border border-white">
+              PANEL #01
+            </div>
+            <h3 class="font-black text-xl text-white uppercase mt-2 mb-3">
+              Penciling & Tight Inks
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              High-action panel layouts, dynamic perspective penciling, crisp black line art, and cinematic shot composition.
+            </p>
+          </div>
+
+          <div class="bg-black/80 border-2 border-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_rgba(48,117,186,1)] hover:border-[#3075ba] transition-colors relative">
+            <div class="absolute -top-4 left-6 bg-[#3075ba] text-white font-black text-xs px-3 py-1 uppercase tracking-widest border border-white">
+              PANEL #02
+            </div>
+            <h3 class="font-black text-xl text-white uppercase mt-2 mb-3">
+              Digital Color & Lighting
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Vibrant digital coloring, atmosphere lighting, energy effects, shadows, and CMYK color separation for press printing.
+            </p>
+          </div>
+
+          <div class="bg-black/80 border-2 border-white p-6 sm:p-8 shadow-[6px_6px_0px_0px_rgba(48,117,186,1)] hover:border-[#3075ba] transition-colors relative">
+            <div class="absolute -top-4 left-6 bg-[#3075ba] text-white font-black text-xs px-3 py-1 uppercase tracking-widest border border-white">
+              PANEL #03
+            </div>
+            <h3 class="font-black text-xl text-white uppercase mt-2 mb-3">
+              Lettering & Sound FX
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Dialogue balloons, caption boxes, custom sound effect artwork (SFX), and font placement mapped for natural reader eye movement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3: Interactive Comic Showcase */}
+    <section 
+      id="comic-showcase"
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/comic-book/section-3.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] bg-white/10 px-4 py-1.5 border border-[#3075ba]/50 inline-block mb-3">
+            COMIC PORTFOLIO
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
+            EXPLORE PUBLISHED COMIC BOOKS
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
+            Search superhero sagas, manga series, and graphic novels published with Hearst Book Studio.
+          </p>
+        </div>
+
+        <ComicShowcase client:load />
+      </div>
+    </section>
+
+    {/* SECTION 4: Comic Styles Grid (Distinct Asymmetric Layout) */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/comic-book/section-4.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/75 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] block mb-2">
+            VERSATILE COMIC FORMATS
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
+            GENRES & FORMATS WE PUBLISH
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Superhero & Action Epic",
+              desc: "High-flying heroes, villian origin sagas, destructive battles, and team crossovers.",
+              tag: "💥 ACTION",
+            },
+            {
+              title: "Manga & Anime Novels",
+              desc: "Authentic screentone shading, expressive character designs, and right-to-left page layouts.",
+              tag: "⛩️ MANGA",
+            },
+            {
+              title: "Sci-Fi & Cyberpunk",
+              desc: "Future metropolis vistas, robotic mechs, alien civilizations, and neon noir visuals.",
+              tag: "🤖 SCI-FI",
+            },
+            {
+              title: "Horror & Suspense Comics",
+              desc: "Chilling shadow artwork, creature designs, psychological thrillers, and dark graphic novels.",
+              tag: "💀 HORROR",
+            },
+            {
+              title: "Middle-Grade Graphic Novels",
+              desc: "Fun school adventures, comedic animal antics, and illustrated storybooks for young comic readers.",
+              tag: "⭐ KIDS",
+            },
+            {
+              title: "Vertical Scroll Webcomics",
+              desc: "Optimized vertical layout formatting for Webtoon, Tapas, and mobile screen reading.",
+              tag: "📱 WEBTOON",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/75 border-2 border-white/20 p-6 hover:border-[#3075ba] transition-all group">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-black text-[#3075ba] uppercase tracking-widest bg-[#3075ba]/10 px-2.5 py-1 border border-[#3075ba]/30">
+                  {item.tag}
+                </span>
+                <span class="text-xs text-gray-400 font-bold">Format #{idx + 1}</span>
+              </div>
+              <h3 class="font-black text-lg text-white uppercase mb-2 group-hover:text-[#3075ba] transition-colors">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed font-normal">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5: Comic Creation Process Roadmap */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/comic-book/section-5.png');"
+    >
+      <div class="absolute inset-0 bg-black/60 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] block mb-2">
+            STEP-BY-STEP PRODUCTION
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white">
+            FROM SCRIPT TO SINGLE ISSUE PRINT
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              step: "PHASE 01",
+              title: "Script & Page Thumbs",
+              desc: "Panel breakdown, dialogue pacing, and quick thumbnail sketches of every page layout.",
+            },
+            {
+              step: "PHASE 02",
+              title: "Penciling & Line Inks",
+              desc: "Detailed page sketching, character expressions, tight black inking, and linework polish.",
+            },
+            {
+              step: "PHASE 03",
+              title: "Color & Lettering",
+              desc: "Full digital color palette rendering, dialogue balloon placement, and custom SFX text.",
+            },
+            {
+              step: "PHASE 04",
+              title: "Print Press & Comixology",
+              desc: "Saddle-stitch single issues, graphic novel paperbacks, and digital Comixology release.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/80 border-2 border-white/20 p-6 relative hover:border-[#3075ba] transition-all">
+              <span class="text-[10px] font-black text-[#3075ba] uppercase tracking-widest block mb-2 bg-[#3075ba]/20 px-2 py-0.5 w-max border border-[#3075ba]/40">
+                {item.step}
+              </span>
+              <h3 class="font-black text-lg text-white uppercase mb-2">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed font-normal">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6: Comic Splash CTA */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t-4 border-b-4 border-[#3075ba]"
+      style="background-image: url('/images/genre/comic-book/section-6.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/85 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] bg-white px-4 py-1 border border-[#3075ba] inline-block mb-4">
+          LAUNCH YOUR COMIC SERVING WORLDWIDE READERS
+        </span>
+        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white mb-6 drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
+          READY TO TURN YOUR SCRIPT INTO ART?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-100 max-w-2xl mx-auto mb-8 leading-relaxed font-medium">
+          Get in touch with our comic book editors, pencilers, and letterers for a free script evaluation.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-13 px-8 bg-[#3075ba] hover:bg-[#2560a0] text-white font-black text-sm uppercase tracking-wider inline-flex items-center gap-2 border-2 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+          >
+            <span>Request Free Script Review</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-13 px-8 bg-white hover:bg-gray-100 text-black font-black text-sm uppercase tracking-wider inline-flex items-center gap-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(48,117,186,1)]"
+          >
+            <span>View Comic Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <EverythingSection client:load />
+    <Footer />
+  </div>
+</Layout>

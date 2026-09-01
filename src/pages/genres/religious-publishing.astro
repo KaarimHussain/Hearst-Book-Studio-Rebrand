@@ -1,44 +1,43 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.tsx";
-import FictionShowcase from "../../components/FictionShowcase.tsx";
+import ReligiousPublishingShowcase from "../../components/ReligiousPublishingShowcase.tsx";
 import EverythingSection from "../../components/EverythingSection.tsx";
 import Footer from "../../components/Footer.astro";
 ---
 
-<Layout title="Fiction Book Publishing — Hearst Book Studio">
+<Layout title="Religious & Faith-Based Publishing — Hearst Book Studio">
   <div class="relative bg-black text-white">
     <Navbar client:load />
 
-    {/* SECTION 1: Cinematic Story Hero */}
+    {/* SECTION 1: Sacred Reverent Hero */}
     <section 
       class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
-      style="background-image: url('/images/genre/fiction/section-1.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-1.png');"
     >
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/80 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-5xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-[#3075ba]/30 border border-[#3075ba]/60 px-4 py-1.5 mb-6">
-          <span class="w-2 h-2 rounded-full bg-[#3075ba]"></span>
-          <span class="text-xs font-bold uppercase tracking-widest text-white">
-            CINEMATIC FICTION STUDIO
+        <div class="inline-flex items-center gap-2 bg-[#3075ba]/25 border border-[#3075ba]/60 px-5 py-1.5 mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
+            ✝ RELIGIOUS & FAITH PUBLISHING STUDIO
           </span>
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-white leading-none mb-6 drop-shadow-xl">
-          IMMERSIVE WORLDS & <span class="text-[#3075ba] italic font-serif lowercase">unforgettable characters</span>
+        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
+          HONORING SACRED TEXTS & <span class="font-serif text-[#3075ba]">SPIRITUAL SCHOLARSHIP</span>
         </h1>
 
-        <p class="text-base sm:text-lg md:text-xl text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
-          From epic fantasy realms and gripping crime thrillers to heart-wrenching romance and sci-fi sagas, Hearst Book Studio crafts bestselling fiction novels designed to captivate readers.
+        <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
+          From theological treatises and devotional study guides to ministry publications and spiritual growth books, Hearst Book Studio provides reverent editing, sacred typesetting, and global distribution.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#fiction-showcase"
-            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+            href="#rel-showcase"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl border border-white/20"
           >
-            <span>Explore Fiction Bestsellers</span>
+            <span>Explore Faith Catalogue</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
             </svg>
@@ -47,64 +46,64 @@ import Footer from "../../components/Footer.astro";
             href="/contact"
             class="h-12 px-8 bg-black/50 text-white font-bold text-xs uppercase tracking-widest border border-white/40 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
           >
-            <span>Publish Your Novel</span>
+            <span>Publish Your Ministry Book</span>
           </a>
         </div>
       </div>
     </section>
 
-    {/* SECTION 2: Storytelling Craftsmanship Pillars */}
+    {/* SECTION 2: Sacred Pillars (Two-Column Classic Layout) */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
-      style="background-image: url('/images/genre/fiction/section-2.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-2.png');"
     >
-      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-black/60 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
-            LITERARY CRAFTSMANSHIP
+            SACRED ACCURACY & EDITORIAL CARE
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
-            THE ART OF BESTSELLING FICTION
+            REVERENT TYPESETTING & SCRIPTURAL PRECISION
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-serif italic">
-              Act I
+          <div class="bg-black/80 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors relative">
+            <div class="w-10 h-10 bg-[#3075ba]/20 border border-[#3075ba] flex items-center justify-center text-[#3075ba] font-serif font-bold text-lg mb-6">
+              ✝
             </div>
-            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
-              World-Building & Plot Pacing
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Theological Fact-Checking & Indexing
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Developmental editors refine three-act plot structures, eliminate plot holes, and enrich setting lore for max immersion.
+              Precise verse citation cross-referencing, scripture index generation, and theological accuracy proofreading.
             </p>
           </div>
 
-          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-serif italic">
-              Act II
+          <div class="bg-black/80 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors relative">
+            <div class="w-10 h-10 bg-[#3075ba]/20 border border-[#3075ba] flex items-center justify-center text-[#3075ba] font-serif font-bold text-lg mb-6">
+              📖
             </div>
-            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
-              Character Arc & Dialogue Polish
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Two-Column Bible Typesetting
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              Sharpening character motivations, dialogue rhythm, emotional beats, and subtext to keep readers turning pages past midnight.
+              Classic two-column layout formatting, red-letter printing support, foil cover stamping, and genuine leather-bound editions.
             </p>
           </div>
 
-          <div class="bg-black/75 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
-            <div class="text-xs font-bold text-[#3075ba] uppercase tracking-widest mb-3 font-serif italic">
-              Act III
+          <div class="bg-black/80 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors relative">
+            <div class="w-10 h-10 bg-[#3075ba]/20 border border-[#3075ba] flex items-center justify-center text-[#3075ba] font-serif font-bold text-lg mb-6">
+              🕊️
             </div>
-            <h3 class="font-extrabold text-xl text-white uppercase mb-3">
-              Cinematic Cover & Interior Formatting
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Church & Bookstore Distribution
             </h3>
             <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
-              High-impact genre cover art combined with custom chapter header ornaments, drop caps, and comfortable reading margins.
+              Worldwide availability through Amazon, Christian bookstores, church bulk distribution networks, and digital platforms.
             </p>
           </div>
         </div>
@@ -113,43 +112,43 @@ import Footer from "../../components/Footer.astro";
 
     {/* SECTION 3: Showcase */}
     <section 
-      id="fiction-showcase"
+      id="rel-showcase"
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
-      style="background-image: url('/images/genre/fiction/section-3.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-3.png');"
     >
       <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
-            FICTION PORTFOLIO
+            FAITH CATALOGUE
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
-            EXPLORE PUBLISHED NOVELS
+            EXPLORE PUBLISHED RELIGIOUS BOOKS
           </h2>
           <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
-            Search fantasy, sci-fi, thriller, romance, and mystery titles.
+            Search theology, devotionals, and ministry literature.
           </p>
         </div>
 
-        <FictionShowcase client:load />
+        <ReligiousPublishingShowcase client:load />
       </div>
     </section>
 
     {/* SECTION 4: Sub-Categories */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
-      style="background-image: url('/images/genre/fiction/section-4.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-4.png');"
     >
       <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
-            FICTION GENRES
+            FAITH CATEGORIES
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
-            FICTION CATEGORIES WE PUBLISH
+            RELIGIOUS DOMAINS WE PUBLISH
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
@@ -157,33 +156,33 @@ import Footer from "../../components/Footer.astro";
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              title: "Sci-Fi & Cyberpunk Sagas",
-              desc: "Deep space exploration, artificial intelligence sagas, futuristic technology, and dystopian fiction.",
+              title: "Theology & Scriptural Exegesis",
+              desc: "Deep biblical commentary, doctrine study guides, historical theology, and academic manuscripts.",
             },
             {
-              title: "Epic Fantasy & Magic Systems",
-              desc: "High fantasy realms, magical systems, sword and sorcery, and mythical creature lore.",
+              title: "Devotionals & Prayer Guides",
+              desc: "365-day prayer journals, guided scripture meditation, and daily family worship guides.",
             },
             {
-              title: "Crime Thrillers & Mystery",
-              desc: "Page-turning detective thrillers, murder mysteries, courtroom drama, and psychological suspense.",
+              title: "Pastoral Leadership & Ministry",
+              desc: "Church planting, pastoral care, sermon series workbooks, and leadership strategies.",
             },
             {
-              title: "Romance & Contemporary Fiction",
-              desc: "Contemporary romance, enemies-to-lovers, slow-burn stories, and heartwarming emotional journeys.",
+              title: "Interfaith & Comparative Religion",
+              desc: "Scholarly comparative studies, interfaith dialogue, and cultural philosophy.",
             },
             {
-              title: "Historical Fiction Sagas",
-              desc: "Period-accurate historical sagas, wartime dramas, ancient civilizations, and biographical fiction.",
+              title: "Christian Memoirs & Testimonies",
+              desc: "Personal faith journeys, missionary accounts, conversion stories, and spiritual triumphs.",
             },
             {
-              title: "Horror & Dark Fantasy",
-              desc: "Supernatural horror, gothic suspense, creature features, and dark psychological thrillers.",
+              title: "Youth Ministry & Sunday School",
+              desc: "Children's Bible storybooks, youth group curriculum, and interactive workbooks.",
             },
           ].map((item, idx) => (
             <div key={idx} class="bg-black/60 border border-white/15 p-6 sm:p-7 hover:border-[#3075ba] transition-colors">
-              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2 font-serif italic">
-                Genre #{idx + 1}
+              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2 font-serif">
+                Domain #{idx + 1}
               </div>
               <h3 class="font-extrabold text-base sm:text-lg text-white uppercase mb-2">
                 {item.title}
@@ -197,20 +196,20 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 5: Novelist Roadmap */}
+    {/* SECTION 5: Ministry Roadmap */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
-      style="background-image: url('/images/genre/fiction/section-5.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-5.png');"
     >
       <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
-            4-STEP NOVELIST PIPELINE
+            4-STEP MINISTRY ROADMAP
           </span>
           <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
-            THE FICTION PUBLISHING ROADMAP
+            THE RELIGIOUS PUBLISHING ROADMAP
           </h2>
           <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
         </div>
@@ -219,23 +218,23 @@ import Footer from "../../components/Footer.astro";
           {[
             {
               step: "PHASE 01",
-              title: "Manuscript Evaluation",
-              desc: "Comprehensive editorial review of plot pacing, character arcs, and narrative voice.",
+              title: "Scripture & Text Review",
+              desc: "Reviewing biblical references, verse formatting, and chapter structure.",
             },
             {
               step: "PHASE 02",
-              title: "Line & Developmental Editing",
-              desc: "Deep line editing, proofreading, and sentence polishing for maximum reader immersion.",
+              title: "Theological Editing",
+              desc: "Copyediting, footnote formatting, and index creation for theological accuracy.",
             },
             {
               step: "PHASE 03",
-              title: "Cover & Interior Formatting",
-              desc: "Designing high-converting genre cover art and custom interior book typography.",
+              title: "Reverent Interior Design",
+              desc: "Two-column bible typesetting, elegant drop caps, and foil-stamped cover design.",
             },
             {
               step: "PHASE 04",
-              title: "Global Distribution & Release",
-              desc: "Releasing across Amazon Kindle, Audible audiobooks, Barnes & Noble, and IngramSpark.",
+              title: "Distribution & Bulk Ordering",
+              desc: "Global distribution across bookstores, online platforms, and church bulk printing.",
             },
           ].map((item, idx) => (
             <div key={idx} class="bg-black/65 border border-white/20 p-6 relative group hover:border-[#3075ba] transition-colors">
@@ -254,36 +253,36 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 6: Novelist CTA */}
+    {/* SECTION 6: Ministry CTA */}
     <section 
       class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
-      style="background-image: url('/images/genre/fiction/section-6.png');"
+      style="background-image: url('/images/genre/religious-publishing/section-6.png');"
     >
       <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-slate-950/70 to-black/80 pointer-events-none"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3">
-          SHARE YOUR STORY WITH MILLIONS OF READERS
+        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3 font-serif">
+          Spread Your Ministry & Message Worldwide
         </span>
         <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6">
-          READY TO PUBLISH YOUR NOVEL?
+          READY TO PUBLISH YOUR RELIGIOUS WORK?
         </h2>
         <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
-          Connect with our fiction editorial team to receive a free manuscript assessment and publishing plan.
+          Speak with our religious publishing directors to receive a free manuscript evaluation and publishing proposal.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a
             href="/contact"
-            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-xs uppercase tracking-widest hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl border border-white/20"
           >
-            <span>Request Free Manuscript Assessment</span>
+            <span>Request Free Manuscript Evaluation</span>
           </a>
           <a
             href="/packages"
             class="h-12 px-8 bg-black/50 text-white font-bold text-xs uppercase tracking-widest border border-white/40 hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
           >
-            <span>View Fiction Packages</span>
+            <span>View Publishing Packages</span>
           </a>
         </div>
       </div>
