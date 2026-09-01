@@ -7,12 +7,12 @@ import Footer from "../../components/Footer.astro";
 ---
 
 <Layout title="Publishing Genres & Categories — Hearst Book Studio">
-  <div class="relative bg-black text-white">
+  <div class="relative bg-white">
     <Navbar client:load />
 
-    {/* SECTION 1: Genre Hub Hero */}
+    {/* SECTION 1: Genre Hub Hero (DARK THEME like homepage hero) */}
     <section 
-      class="relative min-h-[60vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden border-b border-white/10"
+      class="relative min-h-[60vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden border-b border-white/10 bg-black text-white"
       style="background-image: url('/images/genre/fiction/section-1.png');"
     >
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90 pointer-events-none"></div>
@@ -43,17 +43,17 @@ import Footer from "../../components/Footer.astro";
       </div>
     </section>
 
-    {/* SECTION 2: Genres Grid Section */}
-    <section class="relative py-16 sm:py-24 px-4 sm:px-6 bg-slate-950/90">
+    {/* SECTION 2: Genres Grid Section (LIGHT THEME) */}
+    <section class="relative py-16 sm:py-24 px-4 sm:px-6 bg-slate-50 text-gray-900">
       <div class="relative z-10 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2">
             SPECIALIZED PUBLISHING STUDIOS
           </span>
-          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white">
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-gray-900">
             CHOOSE YOUR GENRE DEPARTMENTS
           </h2>
-          <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
+          <p class="text-xs sm:text-sm text-gray-600 mt-3 font-medium">
             Select a genre below to explore tailored publishing services, cover designs, editorial pipelines, and featured book showcases.
           </p>
         </div>

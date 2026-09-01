@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { ArrowRight, Search, X, BookOpen, Layers } from "lucide-react";
+import { ArrowRight, Search, X, Layers } from "lucide-react";
 
 export interface GenreCardData {
   id: string;
@@ -171,17 +171,17 @@ export default function GenresOverviewGrid() {
   return (
     <div className="w-full">
       {/* Control Bar: Filter Pills & Search */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 bg-black/70 p-4 sm:p-5 border border-[#3075ba]/40">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 bg-white p-4 sm:p-5 border border-gray-200 shadow-sm rounded-lg">
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
           {filterOptions.map((opt) => (
             <button
               type="button"
               key={opt}
               onClick={() => setSelectedFilter(opt)}
-              className={`h-9 px-4 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer select-none ${
+              className={`h-9 px-4 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer select-none rounded ${
                 selectedFilter === opt
-                  ? "bg-[#3075ba] text-white shadow-md"
-                  : "bg-white/10 text-white hover:bg-white/20 border border-white/10"
+                  ? "bg-[#3075ba] text-white shadow-sm"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200"
               }`}
             >
               {opt}
@@ -196,13 +196,13 @@ export default function GenresOverviewGrid() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search genre studios, tags..."
-            className="w-full h-9 pl-9 pr-8 bg-white/10 border border-white/20 text-xs text-white placeholder:text-gray-400 focus:outline-none focus:border-[#3075ba] transition-colors"
+            className="w-full h-9 pl-9 pr-8 bg-gray-50 border border-gray-200 text-xs text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#3075ba] focus:bg-white transition-colors rounded"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => setSearchQuery("")}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1 cursor-pointer"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 p-1 cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
@@ -216,25 +216,25 @@ export default function GenresOverviewGrid() {
           {filteredGenres.map((item) => (
             <div
               key={item.id}
-              className="bg-black/75 border border-white/20 hover:border-[#3075ba] transition-all duration-300 flex flex-col justify-between group overflow-hidden"
+              className="bg-white border-2 border-gray-100 hover:border-[#3075ba] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group overflow-hidden rounded-lg"
             >
               <div>
                 {/* Section Cover Preview Header */}
-                <div className="h-52 sm:h-60 relative overflow-hidden bg-slate-950 border-b border-white/10">
+                <div className="h-52 sm:h-60 relative overflow-hidden bg-gray-100 border-b border-gray-100">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-                  <span className="absolute top-3 left-3 bg-[#3075ba] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest shadow-md">
+                  <span className="absolute top-3 left-3 bg-[#3075ba] text-white text-[10px] font-extrabold px-3 py-1 uppercase tracking-widest shadow-md rounded-xs">
                     {item.badge}
                   </span>
 
                   <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-                    <span className="text-[11px] text-gray-300 font-semibold flex items-center gap-1 bg-black/60 px-2.5 py-0.5 border border-white/20">
+                    <span className="text-[11px] text-white font-semibold flex items-center gap-1 bg-black/60 px-2.5 py-0.5 border border-white/20 rounded">
                       <Layers className="w-3 h-3 text-[#3075ba]" />
                       <span>{item.subCategoriesCount} Formats</span>
                     </span>
@@ -243,10 +243,10 @@ export default function GenresOverviewGrid() {
 
                 {/* Card Body */}
                 <div className="p-5 sm:p-6">
-                  <h3 className="text-xl font-extrabold text-white uppercase mb-2 group-hover:text-[#3075ba] transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 uppercase mb-2 group-hover:text-[#3075ba] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-200 leading-relaxed line-clamp-3 mb-4 font-normal">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4 font-normal">
                     {item.description}
                   </p>
 
@@ -255,7 +255,7 @@ export default function GenresOverviewGrid() {
                     {item.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[10px] font-semibold text-gray-300 bg-white/10 px-2 py-0.5 border border-white/10"
+                        className="text-[10px] font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 border border-gray-200 rounded-xs"
                       >
                         {tag}
                       </span>
@@ -268,7 +268,7 @@ export default function GenresOverviewGrid() {
               <div className="p-5 sm:p-6 pt-0">
                 <a
                   href={item.href}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#3075ba] hover:bg-[#2560a0] text-white text-xs font-extrabold py-3 px-4 transition-colors uppercase tracking-widest border border-white/10 shadow-lg"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#3075ba] hover:bg-[#2560a0] text-white text-xs font-bold py-3 px-4 transition-colors uppercase tracking-widest rounded shadow-sm"
                 >
                   <span>Explore {item.title}</span>
                   <ArrowRight className="w-4 h-4" />
@@ -278,7 +278,7 @@ export default function GenresOverviewGrid() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 px-4 bg-black/60 border border-white/10 text-gray-300 text-sm">
+        <div className="text-center py-16 px-4 bg-white border border-gray-200 text-gray-600 text-sm rounded-lg">
           No genre publishing categories found matching your search.
         </div>
       )}
