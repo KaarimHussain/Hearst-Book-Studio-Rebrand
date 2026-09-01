@@ -1,0 +1,298 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import FictionShowcase from "../../components/FictionShowcase.tsx";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Fiction Publishing — Hearst Book Studio">
+  <div class="relative bg-black text-white">
+    <Navbar client:load />
+
+    {/* SECTION 1: Hero Cover Section */}
+    <section 
+      class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/images/genre/fiction/section-1.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/65 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-[#3075ba]/30 border border-[#3075ba]/50 px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#3075ba]"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
+            FICTION PUBLISHING STUDIO
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
+          WHERE BREATHTAKING STORIES BECOME <span class="text-[#3075ba]">LEGENDARY BOOKS</span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
+          From epic fantasy worlds and gripping thrillers to timeless literary classics, Hearst Book Studio provides world-class developmental editing, bespoke cover design, and global bestseller distribution for fiction authors.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#fiction-showcase"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+          >
+            <span>Explore Fiction Books</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+          >
+            <span>Publish Your Novel</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2: Craft & Pillars Section */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/fiction/section-2.png');"
+    >
+      <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            UNCOMPROMISING EDITORIAL STANDARDS
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            CRAFTED FOR IMMERSION & LITERARY EXCELLENCE
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {/* Card 1 */}
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              01
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Developmental Fiction Editing
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Our senior fiction editors evaluate narrative pacing, plot continuity, character motivations, and world-building mechanics to sharpen every chapter of your manuscript.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              02
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Iconic Cover & Interior Layout
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Bespoke cover art engineered for instant genre recognition on digital displays and bookstore shelves, combined with custom interior typography for pure reading pleasure.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              03
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Global Multi-Format Release
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Complete distribution across Amazon Kindle, Audible, IngramSpark, Barnes & Noble, and international bookstores in Hardcover, Paperback, eBook, and Audiobook formats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3: Curated Fiction Portfolio Showcase */}
+    <section 
+      id="fiction-showcase"
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/fiction/section-3.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            OUR FEATURED FICTION CATALOGUE
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            EXPLORE PUBLISHED FICTION TITLES
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
+            Browse our curated showcase of novels, sci-fi masterpieces, and literary works.
+          </p>
+        </div>
+
+        <FictionShowcase client:load />
+      </div>
+    </section>
+
+    {/* SECTION 4: Fiction Sub-Genres Specialization */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/fiction/section-4.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            SPECIALIZED GENRE EDITING
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            FICTION CATEGORIES WE EXCEL IN
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Fantasy & Epic World-Building",
+              desc: "Deep magic systems, complex lore, expansive character rosters, and high-stakes adventure arcs.",
+            },
+            {
+              title: "Science Fiction & Cyberpunk",
+              desc: "Futuristic technology, space exploration, dystopian societies, and mind-bending speculative premises.",
+            },
+            {
+              title: "Mystery, Thrillers & Crime",
+              desc: "Fast-paced tension, tight plot twists, forensic precision, and suspenseful detective narratives.",
+            },
+            {
+              title: "Romance & Contemporary",
+              desc: "Emotional resonance, dynamic relationship arcs, authentic dialogue, and captivating character chemistry.",
+            },
+            {
+              title: "Literary & Historical Fiction",
+              desc: "Rich period detail, evocative prose style, deep thematic exploration, and poignant human stories.",
+            },
+            {
+              title: "Young Adult & Graphic Novels",
+              desc: "Vibrant coming-of-age journeys, high-energy pacing, bold visuals, and engaging youth culture themes.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/60 border border-white/15 p-6 sm:p-7 hover:border-[#3075ba] transition-colors">
+              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2">
+                Sub-Genre #{idx + 1}
+              </div>
+              <h3 class="font-extrabold text-base sm:text-lg text-white uppercase mb-2">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5: 4-Step Fiction Publishing Journey */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/fiction/section-5.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            FROM MANUSCRIPT TO BESTSELLER
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            THE FICTION PUBLISHING ROADMAP
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              step: "PHASE 01",
+              title: "Manuscript Evaluation",
+              desc: "In-depth editorial assessment of your fiction draft with structural and pacing notes.",
+            },
+            {
+              step: "PHASE 02",
+              title: "Editing & Typesetting",
+              desc: "Line editing, copyediting, proofreading, and elegant custom interior formatting.",
+            },
+            {
+              step: "PHASE 03",
+              title: "Cover Design",
+              desc: "Original custom cover artwork designed for maximum digital and physical bookshelf impact.",
+            },
+            {
+              step: "PHASE 04",
+              title: "Global Distribution",
+              desc: "Worldwide release across Amazon, IngramSpark, Barnes & Noble, and international libraries.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/65 border border-white/20 p-6 relative group hover:border-[#3075ba] transition-colors">
+              <span class="text-[10px] font-extrabold text-[#3075ba] uppercase tracking-widest block mb-2">
+                {item.step}
+              </span>
+              <h3 class="font-extrabold text-base text-white uppercase mb-3">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed font-normal">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6: Author Call-To-Action Banner */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
+      style="background-image: url('/images/genre/fiction/section-6.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-slate-950/60 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3 drop-shadow-sm">
+          START YOUR AUTHOR JOURNEY TODAY
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6 drop-shadow-md">
+          READY TO BRING YOUR FICTION NOVEL TO LIFE?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Speak with our senior fiction editors and publishing strategists to receive a free manuscript review and customized publication plan.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+          >
+            <span>Request Free Manuscript Critique</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+          >
+            <span>View Publishing Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <EverythingSection client:load />
+    <Footer />
+  </div>
+</Layout>

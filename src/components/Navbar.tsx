@@ -14,26 +14,34 @@ const serviceItems = [
   { label: "Barcode",         href: "/services/barcode" },
 ];
 
-const navLinks = [
-  { label: "Home",      href: "/" },
-  { label: "About Us",  href: "/about" },
-  { label: "Services",  href: "/services", dropdown: serviceItems },
-  { label: "Packages",  href: "/packages" },
-  { label: "Portfolio", href: "/portfolio" },
+const genreItems = [
+  { label: "Fiction",                       href: "/genres/fiction" },
+  { label: "Non-Fiction",                   href: "/genres/non-fiction" },
+  { label: "Children's Book",               href: "/genres/childrens-book" },
+  { label: "Self-Help",                     href: "/genres/self-help" },
+  { label: "Art & Illustration",            href: "/portfolio" },
+  { label: "Religious Publishing",          href: "/portfolio" },
+  { label: "Inspirational",                 href: "/portfolio" },
+  { label: "Comic Book",                    href: "/portfolio" },
+  { label: "Biographies & Autobiographies", href: "/portfolio" },
+  { label: "Business",                      href: "/portfolio" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<"services" | "genres" | null>(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileGenresOpen, setMobileGenresOpen] = useState(false);
+  
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const openServices = () => {
+  const openDropdown = (type: "services" | "genres") => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    setServicesOpen(true);
+    setActiveDropdown(type);
   };
+
   const scheduleClose = () => {
-    closeTimer.current = setTimeout(() => setServicesOpen(false), 180);
+    closeTimer.current = setTimeout(() => setActiveDropdown(null), 180);
   };
 
   return (
@@ -45,63 +53,123 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-5 xl:gap-7">
-          {navLinks.map((link) =>
-            link.dropdown ? (
-              /* Services with dropdown */
+          <a
+            href="/"
+            className="text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+          >
+            Home
+          </a>
+          
+          <a
+            href="/about"
+            className="text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+          >
+            About Us
+          </a>
+
+          {/* Services Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => openDropdown("services")}
+            onMouseLeave={scheduleClose}
+          >
+            <a
+              href="/services"
+              className="flex items-center gap-1 text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+            >
+              Services
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === "services" ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            {activeDropdown === "services" && (
               <div
-                key={link.href}
-                className="relative"
-                onMouseEnter={openServices}
+                className="absolute top-full left-1/2 -translate-x-1/2 w-52 pt-2"
+                onMouseEnter={() => openDropdown("services")}
                 onMouseLeave={scheduleClose}
               >
-                <a
-                  href={link.href}
-                  className="flex items-center gap-1 text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
-                >
-                  {link.label}
-                  {/* chevron */}
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </a>
-
-                {/* Dropdown panel — pt-2 bridges the gap so mouse stays in bounds */}
-                {servicesOpen && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 w-52 pt-2"
-                    onMouseEnter={openServices}
-                    onMouseLeave={scheduleClose}
-                  >
-                  <div className="bg-black/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-white/10">
-                    {serviceItems.map((item) => (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-2.5 text-white text-xs font-semibold uppercase tracking-wide hover:bg-[#3075ba] hover:text-white transition-colors border-b border-white/10 last:border-0"
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
-                  </div>
-                )}
+                <div className="bg-black/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-white/10">
+                  {serviceItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-white text-xs font-semibold uppercase tracking-wide hover:bg-[#3075ba] hover:text-white transition-colors border-b border-white/10 last:border-0"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
               </div>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+            )}
+          </div>
+
+          {/* Genres Dropdown (Styled identically to Services dropdown) */}
+          <div
+            className="relative"
+            onMouseEnter={() => openDropdown("genres")}
+            onMouseLeave={scheduleClose}
+          >
+            <a
+              href="/portfolio"
+              className="flex items-center gap-1 text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+            >
+              Genres
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === "genres" ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                viewBox="0 0 24 24"
               >
-                {link.label}
-              </a>
-            )
-          )}
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            {activeDropdown === "genres" && (
+              <div
+                className="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-2"
+                onMouseEnter={() => openDropdown("genres")}
+                onMouseLeave={scheduleClose}
+              >
+                <div className="bg-black/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-white/10">
+                  {genreItems.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-white text-xs font-semibold uppercase tracking-wide hover:bg-[#3075ba] hover:text-white transition-colors border-b border-white/10 last:border-0"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <a
+            href="/packages"
+            className="text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+          >
+            Packages
+          </a>
+
+          <a
+            href="/portfolio"
+            className="text-white font-semibold text-sm hover:text-[#3075ba] transition-colors whitespace-nowrap"
+          >
+            Portfolio
+          </a>
         </div>
 
         <a
@@ -130,56 +198,112 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-black/95 px-4 sm:px-6 pb-4">
-          {navLinks.map((link) =>
-            link.dropdown ? (
-              <div key={link.href}>
-                {/* Services toggle row */}
-                <div className="flex items-center justify-between border-b border-white/10">
-                  <a href={link.href} className="py-3 text-white font-semibold text-sm flex-1">
-                    {link.label}
-                  </a>
-                  <button
-                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="text-white p-2"
-                    aria-label="Toggle services"
-                  >
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2.5}
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                </div>
-                {/* Sub-links */}
-                {mobileServicesOpen && (
-                  <div className="bg-white/5 rounded-lg my-1 overflow-hidden">
-                    {serviceItems.map((item) => (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="block px-5 py-2.5 text-white/80 font-semibold text-xs uppercase tracking-wide hover:text-[#3075ba] border-b border-white/5 last:border-0 transition-colors"
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block py-3 text-white font-semibold text-sm border-b border-white/10"
-              >
-                {link.label}
+        <div className="lg:hidden bg-black/95 px-4 sm:px-6 pb-4 max-h-[85vh] overflow-y-auto">
+          <a
+            href="/"
+            className="block py-3 text-white font-semibold text-sm border-b border-white/10"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block py-3 text-white font-semibold text-sm border-b border-white/10"
+          >
+            About Us
+          </a>
+
+          {/* Services mobile section */}
+          <div>
+            <div className="flex items-center justify-between border-b border-white/10">
+              <a href="/services" className="py-3 text-white font-semibold text-sm flex-1">
+                Services
               </a>
-            )
-          )}
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="text-white p-2"
+                aria-label="Toggle services"
+              >
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    mobileServicesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            {mobileServicesOpen && (
+              <div className="bg-white/5 rounded-lg my-1 overflow-hidden">
+                {serviceItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="block px-5 py-2.5 text-white/80 font-semibold text-xs uppercase tracking-wide hover:text-[#3075ba] border-b border-white/5 last:border-0 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Genres mobile section */}
+          <div>
+            <div className="flex items-center justify-between border-b border-white/10">
+              <a href="/portfolio" className="py-3 text-white font-semibold text-sm flex-1">
+                Genres
+              </a>
+              <button
+                onClick={() => setMobileGenresOpen(!mobileGenresOpen)}
+                className="text-white p-2"
+                aria-label="Toggle genres"
+              >
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    mobileGenresOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            {mobileGenresOpen && (
+              <div className="bg-white/5 rounded-lg my-1 overflow-hidden">
+                {genreItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="block px-5 py-2.5 text-white/80 font-semibold text-xs uppercase tracking-wide hover:text-[#3075ba] border-b border-white/5 last:border-0 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <a
+            href="/packages"
+            className="block py-3 text-white font-semibold text-sm border-b border-white/10"
+          >
+            Packages
+          </a>
+
+          <a
+            href="/portfolio"
+            className="block py-3 text-white font-semibold text-sm border-b border-white/10"
+          >
+            Portfolio
+          </a>
+
           <a
             href="/contact"
             className="mt-3 inline-block bg-[#3075ba] px-4 py-2 text-white font-semibold text-sm"

@@ -14,7 +14,7 @@ import Footer from "../components/Footer.astro";
 <Layout title="Portfolio — Hearst Book Studio">
   <div class="relative">
     <Navbar client:load />
-    <InnerPageHero 
+    <InnerPageHero
       bgImg="/images/Rectangle%202.png"
       heading="PEEK BEHIND THE CURTAINS TO OUR PROUD ACHIEVEMENTS"
       subtext="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966."
@@ -22,16 +22,25 @@ import Footer from "../components/Footer.astro";
   </div>
 
   <section class="py-10 sm:py-14 bg-white">
-    <ScrollReveal client:visible direction="up" className="max-w-7xl mx-auto px-4 sm:px-6">
-      <p class="text-[#555] text-xs sm:text-sm font-medium leading-relaxed max-w-5xl">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation.
+    <ScrollReveal
+      client:visible
+      direction="up"
+      className="max-w-7xl mx-auto px-4 sm:px-6"
+    >
+      <p
+        class="text-[#555] text-xs sm:text-sm font-medium leading-relaxed max-w-5xl"
+      >
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since 1966, when designers at Letraset and James Mosley, the librarian
+        at St Bride Printing Library in London, took a 1914 Cicero translation.
       </p>
     </ScrollReveal>
   </section>
 
   <BrandsSection />
-  
-  <PortfolioGrid client:visible />
+
+  <PortfolioGrid client:load />
 
   <PublishingServices />
 
@@ -41,6 +50,6 @@ import Footer from "../components/Footer.astro";
   />
 
   <EverythingSection client:load />
-  
+
   <Footer />
 </Layout>

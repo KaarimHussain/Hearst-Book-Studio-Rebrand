@@ -1,0 +1,295 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import ChildrenBookShowcase from "../../components/ChildrenBookShowcase.tsx";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Children's Book Publishing — Hearst Book Studio">
+  <div class="relative bg-black text-white">
+    <Navbar client:load />
+
+    {/* SECTION 1: Hero Cover Section */}
+    <section 
+      class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/images/genre/children-book/section-1.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/65 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-[#3075ba]/30 border border-[#3075ba]/50 px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#3075ba]"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba]">
+            CHILDREN'S BOOK PUBLISHING STUDIO
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-tight mb-6 drop-shadow-xl">
+          BRINGING ENCHANTING STORIES & <span class="text-[#3075ba]">VIBRANT ART TO LIFE</span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
+          From full-color picture books and early reader series to middle-grade graphic novels and activity books, Hearst Book Studio specializes in breathtaking character illustration, child-friendly typography, and global distribution.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#children-showcase"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+          >
+            <span>Explore Children's Showcase</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+          >
+            <span>Publish Your Story</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2: Pillars */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/children-book/section-2.png');"
+    >
+      <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            CREATIVE EXCELLENCE FOR YOUNG READERS
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            BEAUTIFULLY ILLUSTRATED & MASTERFULLY PRINTED
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              01
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Bespoke Character Illustration
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Award-winning digital and hand-drawn character design, vibrant double-page spreads, and expressive artwork tailored to your target age group.
+            </p>
+          </div>
+
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              02
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Child-Friendly Layout & Typography
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              High-readability font pairing, custom text placement integrated with artwork, and precise trim sizing for maximum visual engagement.
+            </p>
+          </div>
+
+          <div class="bg-black/65 border border-white/20 p-6 sm:p-8 hover:border-[#3075ba] transition-colors group">
+            <div class="w-12 h-12 bg-[#3075ba]/30 border border-[#3075ba]/60 flex items-center justify-center text-[#3075ba] font-bold text-lg mb-6 group-hover:bg-[#3075ba] group-hover:text-white transition-colors">
+              03
+            </div>
+            <h3 class="font-extrabold text-lg text-white uppercase mb-3">
+              Durable Premium Print & eBook Setup
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-normal">
+              Premium glossy & hardcover print specifications, board book formatting, and fixed-layout eBook conversion for Kindle & Apple Books.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3: Curated Children's Portfolio Showcase */}
+    <section 
+      id="children-showcase"
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/children-book/section-3.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            OUR FEATURED CHILDREN'S CATALOGUE
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            EXPLORE PUBLISHED CHILDREN'S BOOKS
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-200 mt-3 font-medium">
+            Browse our curated showcase of picture books, graphic novels, and activity books.
+          </p>
+        </div>
+
+        <ChildrenBookShowcase client:load />
+      </div>
+    </section>
+
+    {/* SECTION 4: Sub-Categories Specialization */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/children-book/section-4.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            AGE-APPROPRIATE FORMATTING
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            CHILDREN'S BOOK FORMATS WE PUBLISH
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Illustrated Picture Books (Ages 3-8)",
+              desc: "Full-bleed artwork, bedtime stories, animal tales, and moral lessons for young listeners.",
+            },
+            {
+              title: "Early Reader & Chapter Books (Ages 6-9)",
+              desc: "Short chapters, spot illustrations, easy vocabulary, and encouraging adventure themes.",
+            },
+            {
+              title: "Middle-Grade & Graphic Novels (Ages 8-12)",
+              desc: "Dynamic comic paneling, humor, mystery, action, and relatable school/family stories.",
+            },
+            {
+              title: "Colouring & Activity Books",
+              desc: "Interactive drawing prompts, animal colouring pages, puzzles, and educational workbooks.",
+            },
+            {
+              title: "Board Books for Toddlers (Ages 0-3)",
+              desc: "Sturdy board layouts, bold high-contrast shapes, counting, rhyming, and sensory concepts.",
+            },
+            {
+              title: "Educational & STEM Books",
+              desc: "Science, nature, geography, and skill-building guides presented with fun visual explanations.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/60 border border-white/15 p-6 sm:p-7 hover:border-[#3075ba] transition-colors">
+              <div class="text-[#3075ba] font-bold text-xs uppercase tracking-widest mb-2">
+                Category #{idx + 1}
+              </div>
+              <h3 class="font-extrabold text-base sm:text-lg text-white uppercase mb-2">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5: Publishing Process */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/genre/children-book/section-5.png');"
+    >
+      <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-2 drop-shadow-sm">
+            4-STEP ILLUSTRATED ROADMAP
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-white drop-shadow-md">
+            HOW WE PUBLISH YOUR CHILDREN'S BOOK
+          </h2>
+          <div class="w-16 h-1 bg-[#3075ba] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              step: "PHASE 01",
+              title: "Storyboard & Script Review",
+              desc: "Refining your story arc, page-turn pacing, and scene-by-scene illustration prompts.",
+            },
+            {
+              step: "PHASE 02",
+              title: "Character Design & Art",
+              desc: "Creating character sketches, color palettes, and full-page final digital illustrations.",
+            },
+            {
+              step: "PHASE 03",
+              title: "Layout & Typesetting",
+              desc: "Harmonizing text placement with illustrations and preparing high-res print files.",
+            },
+            {
+              step: "PHASE 04",
+              title: "Print & Global Distribution",
+              desc: "Release in Hardcover, Paperback, and eBook across Amazon, IngramSpark, and bookstores.",
+            },
+          ].map((item, idx) => (
+            <div key={idx} class="bg-black/65 border border-white/20 p-6 relative group hover:border-[#3075ba] transition-colors">
+              <span class="text-[10px] font-extrabold text-[#3075ba] uppercase tracking-widest block mb-2">
+                {item.step}
+              </span>
+              <h3 class="font-extrabold text-base text-white uppercase mb-3">
+                {item.title}
+              </h3>
+              <p class="text-xs text-gray-200 leading-relaxed font-normal">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6: Call-To-Action Banner */}
+    <section 
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
+      style="background-image: url('/images/genre/children-book/section-6.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-slate-950/60 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#3075ba] block mb-3 drop-shadow-sm">
+          SHARE YOUR STORY WITH THE WORLD
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold uppercase tracking-tight text-white mb-6 drop-shadow-md">
+          READY TO PUBLISH YOUR CHILDREN'S BOOK?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Connect with our children's book publishing team and illustration directors for a free storyboard consultation.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-[#3075ba] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-[#2560a0] transition-colors inline-flex items-center gap-2 shadow-xl"
+          >
+            <span>Request Free Story Consultation</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-12 px-8 bg-black/40 text-white font-bold text-sm uppercase tracking-wider border-2 border-white hover:bg-white hover:text-black transition-colors inline-flex items-center gap-2"
+          >
+            <span>Explore Publishing Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <EverythingSection client:load />
+    <Footer />
+  </div>
+</Layout>

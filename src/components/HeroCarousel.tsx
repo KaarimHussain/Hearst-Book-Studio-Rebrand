@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const carouselVideos = [
@@ -75,24 +75,6 @@ export default function HeroCarousel() {
           ))}
         </div>
       </motion.div>
-
-      {/* Play button hidden on small screens */}
-      <motion.div 
-        className="hidden sm:block absolute right-8 sm:right-16 lg:right-24 bottom-10 sm:bottom-14 z-20"
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-      >
-        <div 
-          className="relative w-12 h-12 sm:w-14 sm:h-14 cursor-pointer hover:scale-110 transition-transform"
-          onClick={() => setActiveIndex((current) => (current + 1) % carouselVideos.length)}
-          title="Next Video"
-        >
-          <img src="/images/bc11f2c6-b940-459e-93a5-714f5e32413d.svg" alt="" className="w-full h-full" />
-          <img src="/images/f8f44729-e495-4ea4-ad86-1f506eb92c1a.svg" alt="Next video" className="absolute inset-0 m-auto w-6 h-6 sm:w-7 sm:h-7" />
-        </div>
-      </motion.div>
-      
     </section>
   );
 }

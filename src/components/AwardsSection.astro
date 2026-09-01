@@ -1,0 +1,125 @@
+---
+import axiomImg from "../assets/awards/axiom.avif";
+import finalistImg from "../assets/awards/finalist.avif";
+import globalImg from "../assets/awards/global.avif";
+import goldImg from "../assets/awards/gold.avif";
+import illumImg from "../assets/awards/illum.avif";
+import moonImg from "../assets/awards/moon.avif";
+import ScrollReveal from "./ui/ScrollReveal.tsx";
+
+const awards = [
+  {
+    image: goldImg.src,
+    title: "Non-Fiction Book Awards",
+    subtitle: "Gold Winner",
+    category: "Non-Fiction Excellence",
+  },
+  {
+    image: finalistImg.src,
+    title: "American Book Fest",
+    subtitle: "Best Book Awards Finalist",
+    category: "Literary Finalist",
+  },
+  {
+    image: axiomImg.src,
+    title: "Axiom Business Book Awards",
+    subtitle: "Business Publishing Winner",
+    category: "Business & Leadership",
+  },
+  {
+    image: globalImg.src,
+    title: "Global Book Award",
+    subtitle: "Gold Award Winner",
+    category: "International Recognition",
+  },
+  {
+    image: illumImg.src,
+    title: "Illumination Book Awards",
+    subtitle: "Shining Light Medalist",
+    category: "Exemplary Literature",
+  },
+  {
+    image: moonImg.src,
+    title: "Moonbeam Children's Book Awards",
+    subtitle: "Gold Medal Winner",
+    category: "Children's Literature",
+  },
+];
+
+const arrowIcon = "/images/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
+---
+
+<section class="py-14 sm:py-16 md:py-20 bg-[#F9FAFB] border-y border-gray-200/80 overflow-hidden relative">
+  <!-- Subtle background glow accents -->
+  <div class="absolute -right-24 -top-24 w-96 h-96 bg-[#3075ba]/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-24 -bottom-24 w-96 h-96 bg-[#C59B27]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Left side: Hero Header Card -->
+      <ScrollReveal
+        client:visible
+        direction="left"
+        className="lg:col-span-5 bg-white border border-[rgba(185,185,185,0.4)] p-7 sm:p-9 shadow-sm relative overflow-hidden"
+      >
+        <!-- Accent indicator line -->
+        <div class="w-16 h-1 bg-[#C59B27] mb-6"></div>
+
+        <span class="text-xs sm:text-sm font-semibold tracking-widest text-[#C59B27] uppercase block mb-2">
+          Recognized Excellence
+        </span>
+
+        <h2 class="font-extrabold text-2xl sm:text-3xl lg:text-4xl uppercase leading-tight text-black mb-4">
+          Award–Winning Book <br />
+          <span class="text-[#3075ba]">Creation Is Our Forte</span>
+        </h2>
+
+        <p class="text-[#555] text-sm leading-relaxed mb-8">
+          From editorial mastery to breathtaking cover artwork and flawless layout formatting, our published titles consistently earn top honors from leading global literary awards.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href="/portfolio"
+            class="inline-flex items-center gap-2 bg-black h-11 px-6 text-white font-semibold text-sm hover:bg-[#3075ba] transition-colors"
+          >
+            Explore Award Winners
+            <img src={arrowIcon} alt="" class="w-4 h-4 rotate-180" />
+          </a>
+        </div>
+      </ScrollReveal>
+
+      <!-- Right side: 6-Badge Award Card Grid -->
+      <ScrollReveal
+        client:visible
+        direction="right"
+        className="lg:col-span-7"
+      >
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+          {awards.map((award) => (
+            <div class="group bg-white border border-[rgba(185,185,185,0.4)] p-5 sm:p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-[#3075ba] hover:shadow-md hover:-translate-y-1">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 mb-4 flex items-center justify-center p-1 group-hover:scale-105 transition-transform duration-300">
+                <img
+                  src={award.image}
+                  alt={award.title}
+                  class="max-h-full max-w-full object-contain filter drop-shadow-sm"
+                />
+              </div>
+              <span class="text-[10px] font-bold tracking-wider text-[#C59B27] uppercase mb-1">
+                {award.category}
+              </span>
+              <h3 class="text-xs sm:text-sm font-bold text-gray-900 leading-snug line-clamp-2">
+                {award.title}
+              </h3>
+              <p class="text-[11px] text-gray-500 mt-1 font-medium">
+                {award.subtitle}
+              </p>
+            </div>
+          ))}
+        </div>
+      </ScrollReveal>
+
+    </div>
+  </div>
+</section>
