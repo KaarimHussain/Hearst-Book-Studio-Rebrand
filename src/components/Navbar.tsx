@@ -4,14 +4,18 @@ const logo = "/images/59b2e986-5744-4913-ba3d-18954a833206.webp";
 const arrowIcon = "/images/d9c7ff95-3112-46c5-9134-a2d883bdcb49.svg";
 
 const serviceItems = [
-  { label: "Book Publishing", href: "/services/book-publishing" },
-  { label: "Book Editing",    href: "/services/book-editing" },
-  { label: "Book Format",     href: "/services/book-format" },
-  { label: "Typesetting",     href: "/services/typesetting" },
-  { label: "Book Printing",   href: "/services/book-printing" },
-  { label: "Proofreading",    href: "/services/proofreading" },
-  { label: "Audio Book",      href: "/services/audio-book" },
-  { label: "Barcode",         href: "/services/barcode" },
+  { label: "Book Publishing",          href: "/services/book-publishing" },
+  { label: "Children Book Publishing", href: "/services/children-book-publishing" },
+  { label: "Illustrations",            href: "/services/illustrations" },
+  { label: "Ghostwriting",             href: "/services/ghostwriting" },
+  { label: "Book Editing & Formatting",href: "/services/book-editing" },
+  { label: "Global Distribution",      href: "/services/global-distribution" },
+  { label: "Comic Book Publishing",    href: "/services/comic-book-publishing" },
+  { label: "Religious Publishing",     href: "/services/religious-publishing" },
+  { label: "Book Marketing",           href: "/services/book-marketing" },
+  { label: "Audiobook Production",     href: "/services/audio-book" },
+  { label: "Book Video",               href: "/services/book-video" },
+  { label: "Author Website",           href: "/services/author-website" },
 ];
 
 const genreItems = [

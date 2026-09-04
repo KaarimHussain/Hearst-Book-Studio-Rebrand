@@ -1,0 +1,300 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.tsx";
+import EverythingSection from "../../components/EverythingSection.tsx";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Children Book Publishing — HearEst Book Studio">
+  <div class="relative bg-black text-white">
+    <Navbar client:load />
+
+    {/* HERO */}
+    <section
+      class="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style="background-image: url('/images/services/children-book/hero-section.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
+          <span class="bg-[#3075ba] text-white text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-lg border border-white/20">
+            🎨 Full-Spread Illustration
+          </span>
+          <span class="bg-amber-500 text-black text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-lg">
+            👶 Ages 0 – 12+
+          </span>
+          <span class="bg-emerald-500 text-black text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-lg">
+            📚 Picture Books & Graphic Novels
+          </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-none mb-6 drop-shadow-2xl">
+          PUBLISH STORIES THAT <br />
+          <span class="text-white underline decoration-amber-400 decoration-wavy underline-offset-8">LITTLE HEARTS LOVE</span>
+        </h1>
+
+        <p class="text-base sm:text-lg md:text-xl text-gray-100 font-medium max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 drop-shadow-md">
+          From whimsical picture books and vibrant character art to early-reader
+          chapter books, we turn your story into a beautifully illustrated
+          hardcover children treasure forever.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-[#3075ba] hover:bg-[#2560a0] text-white font-black text-sm uppercase tracking-wider rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-2xl border border-white/20"
+          >
+            <span>Start Your Children's Book</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-12 px-8 bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-wider rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-2xl"
+          >
+            <span>View Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* ABOUT / INTRO */}
+    <section
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/services/children-book/about-section.png');"
+    >
+      <div class="absolute inset-0 bg-black/70 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-amber-400 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/30 inline-block mb-4">
+            A LEADING CHILDREN'S BOOK PUBLISHER
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white leading-tight mb-5">
+            HEARST BOOK STUDIO — WHERE EVERY STORY FINDS ITS MAGIC
+          </h2>
+          <p class="text-sm text-gray-200 leading-relaxed mb-4">
+            At HearEst Book Studio we believe every child deserves a book that
+            sparks their imagination. Our children's book publishing service
+            brings together award-winning illustrators, expert editors, and
+            experienced production teams to craft picture books, board books,
+            and early-reader titles that captivate young minds from the very
+            first page.
+          </p>
+          <p class="text-sm text-gray-200 leading-relaxed mb-6">
+            Whether you have a complete manuscript ready or just a sketch of an
+            idea, we guide you through every stage — from character design and
+            storyboarding all the way to printing, ISBN registration, and global
+            distribution on Amazon, Barnes & Noble, and beyond.
+          </p>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Children's books demand a unique blend of vibrant color accuracy,
+            child-safe inks, durable binding, and age-appropriate typography.
+            Our studio handles every technical detail so your story reaches
+            little readers looking and feeling exactly as you imagined it.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { icon: "🎨", title: "Custom Illustrators", desc: "World-class artists matched to your story's tone and age group." },
+            { icon: "📐", title: "Professional Storyboarding", desc: "Panel-by-panel layout mapped for perfect text-image balance." },
+            { icon: "📖", title: "Hardcover & Board Book", desc: "Premium paper stock, gloss/matte lamination, child-safe finishes." },
+            { icon: "🌍", title: "Global Distribution", desc: "Listed on Amazon, IngramSpark, Apple Books, and all major platforms." },
+          ].map((card) => (
+            <div class="bg-black/60 border border-white/20 rounded-2xl p-5 hover:border-amber-400 transition-colors">
+              <div class="text-3xl mb-3">{card.icon}</div>
+              <h3 class="font-black text-sm text-white uppercase mb-2">{card.title}</h3>
+              <p class="text-xs text-gray-300 leading-relaxed">{card.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SERVICES / FEATURES */}
+    <section
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/services/children-book/services-section.png');"
+    >
+      <div class="absolute inset-0 bg-black/65 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] bg-[#3075ba]/20 px-4 py-1.5 rounded-full border border-[#3075ba]/40 inline-block mb-3">
+            TAILORED FOR EVERY READING STAGE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white drop-shadow-md">
+            WHAT WE SPECIALIZE IN
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          {/* Checklist */}
+          <div>
+            <h3 class="font-black text-lg text-white uppercase mb-5">Our Full-Service Offering Includes:</h3>
+            <ul class="space-y-4">
+              {[
+                "Complete manuscript editing tailored to target age group",
+                "Custom character concept art and full-spread illustration",
+                "32-page or custom-length storyboard layout and design",
+                "Hardcover, paperback, and board book print production",
+                "ISBN registration and EAN-13 barcode generation",
+                "Ebook conversion for Kindle, Apple Books, and Google Play",
+                "Global retail distribution via Amazon and IngramSpark",
+                "Audiobook narration with background music (optional)",
+              ].map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-amber-500 text-black flex items-center justify-center text-xs font-black">✓</span>
+                  <span class="text-sm text-gray-200 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Age-group cards */}
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {[
+              { age: "Ages 0–3",  title: "Board Books",          desc: "Thick pages, high-contrast art, and simple words for toddlers.", color: "border-pink-500/50 bg-pink-950/40",    tag: "bg-pink-500 text-white" },
+              { age: "Ages 3–7",  title: "Picture Books",        desc: "Rhyming tales with full 32-page illustrated spreads.",          color: "border-[#3075ba]/50 bg-blue-950/40",  tag: "bg-[#3075ba] text-white" },
+              { age: "Ages 6–9",  title: "Early Reader Books",   desc: "Large fonts, short chapters, and frequent illustrations.",      color: "border-amber-500/50 bg-amber-950/40", tag: "bg-amber-500 text-black" },
+              { age: "Ages 8–12+","title": "Kids Graphic Novels", desc: "Action-packed comics and middle-grade adventure series.",       color: "border-emerald-500/50 bg-emerald-950/40", tag: "bg-emerald-500 text-black" },
+            ].map((item) => (
+              <div class={`rounded-3xl border-2 p-6 flex flex-col justify-between transition-transform hover:-translate-y-2 duration-300 ${item.color}`}>
+                <div>
+                  <span class={`inline-block text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full mb-4 shadow-md ${item.tag}`}>
+                    {item.age}
+                  </span>
+                  <h3 class="font-black text-base text-white uppercase mb-2 leading-snug">{item.title}</h3>
+                  <p class="text-xs text-gray-200 leading-relaxed">{item.desc}</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-white/10 text-xs text-amber-400 font-bold">★ ★ ★ ★ ★</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* HOW WE WORK */}
+    <section
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/services/children-book/how-we-work.png');"
+    >
+      <div class="absolute inset-0 bg-black/65 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-black uppercase tracking-widest text-[#3075ba] bg-[#3075ba]/20 px-4 py-1.5 rounded-full border border-[#3075ba]/40 inline-block mb-3">
+            FROM IDEA TO ILLUSTRATED BOOK
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white drop-shadow-md">
+            4-STEP STORYBOOK JOURNEY
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { step: "STEP 1", title: "Manuscript Editing",      desc: "Refining rhyming meter, word choice, and story arc for the target age group.",               icon: "📝" },
+            { step: "STEP 2", title: "Character Design",         desc: "Sketching main characters, color palettes, and emotional expressions for author approval.",   icon: "🖌️" },
+            { step: "STEP 3", title: "32-Page Art Spread",       desc: "Rendering high-resolution full-spread illustrations with professionally embedded text layout.", icon: "🖼️" },
+            { step: "STEP 4", title: "Print & Global Launch",    desc: "Printing proof copies, publishing on Amazon, and launching targeted marketing campaigns.",     icon: "🚀" },
+          ].map((item) => (
+            <div class="bg-black/70 border-2 border-white/20 rounded-3xl p-6 hover:border-[#3075ba] transition-all">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/30">
+                  {item.step}
+                </span>
+                <span class="text-2xl">{item.icon}</span>
+              </div>
+              <h3 class="font-black text-lg text-white uppercase mb-2">{item.title}</h3>
+              <p class="text-xs text-gray-200 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* WHY CHOOSE US */}
+    <section
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-white/10"
+      style="background-image: url('/images/services/children-book/why-choose-us.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div class="w-full lg:w-5/12 bg-black/70 border-2 border-[#3075ba]/60 p-8 sm:p-10 rounded-3xl">
+            <span class="text-xs font-black uppercase tracking-widest text-amber-400 block mb-2">
+              WHY AUTHORS TRUST US
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white leading-tight mb-4">
+              PERFECT COLOR ACCURACY & CHILD SAFETY STANDARDS
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed mb-6">
+              Children's books require precise paper weight, non-toxic inks,
+              durable binding, and vibrant CMYK color matching. We ensure every
+              page looks stunning in little hands and meets global safety standards.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-bold text-amber-300 bg-amber-400/10 p-3.5 rounded-2xl border border-amber-400/30">
+              <span class="text-2xl">✨</span>
+              <span>100% Custom Character Concept Art Included</span>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              { title: "Custom Illustrator Match",     desc: "We pair your story with world-class children's book illustrators in watercolor, digital 2D/3D, or vector art styles.", icon: "🎨" },
+              { title: "Professional Storyboarding",   desc: "Every 32-page layout is carefully panel-mapped to balance text and full-spread illustrations for perfect pacing.",       icon: "📐" },
+              { title: "Hardcover & Board Book Print", desc: "Heavy-duty paper stock, gloss/matte lamination, and child-safe rounded corner finishes for lasting durability.",         icon: "📖" },
+              { title: "Global Distribution & Audio",  desc: "Instant listing on Amazon, Barnes & Noble, IngramSpark, plus character-narrated audiobooks with background music.",       icon: "🎧" },
+            ].map((box) => (
+              <div class="bg-black/65 border border-white/20 p-6 rounded-2xl hover:border-amber-400 transition-colors">
+                <div class="text-3xl mb-3">{box.icon}</div>
+                <h3 class="font-black text-base text-white uppercase mb-2">{box.title}</h3>
+                <p class="text-xs text-gray-200 leading-relaxed">{box.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section
+      class="relative py-16 sm:py-24 px-4 sm:px-6 bg-cover bg-center bg-no-repeat border-t border-b border-[#3075ba]/40"
+      style="background-image: url('/images/services/children-book/cta.png');"
+    >
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-blue-950/70 to-black/80 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <span class="text-xs font-black uppercase tracking-widest text-amber-400 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/30 inline-block mb-4">
+          YOUR STORYBOOK DREAM STARTS HERE
+        </span>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6 drop-shadow-md">
+          READY TO ILLUMINATE A CHILD'S IMAGINATION?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-100 max-w-2xl mx-auto mb-8 leading-relaxed font-medium">
+          Get a free consultation with our children's book editorial directors
+          and illustration team — no commitment required.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/contact"
+            class="h-12 px-8 bg-[#3075ba] hover:bg-[#2560a0] text-white font-black text-sm uppercase tracking-wider rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-2xl border border-white/20"
+          >
+            <span>Request Free Consultation</span>
+          </a>
+          <a
+            href="/packages"
+            class="h-12 px-8 bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-wider rounded-full transition-all transform hover:scale-105 inline-flex items-center gap-2 shadow-2xl"
+          >
+            <span>View Children's Packages</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <EverythingSection client:load />
+    <Footer />
+  </div>
+</Layout>

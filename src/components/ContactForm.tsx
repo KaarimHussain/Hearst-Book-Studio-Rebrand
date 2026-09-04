@@ -95,10 +95,18 @@ export default function ContactForm() {
                     className="w-full h-12 px-4 border border-gray-300 text-sm text-gray-700 focus:border-black focus:outline-none transition-colors appearance-none bg-white"
                   >
                     <option value="">Select a service</option>
-                    <option value="publishing">Book Publishing</option>
-                    <option value="editing">Book Editing</option>
-                    <option value="formatting">Book Formatting</option>
-                    <option value="marketing">Marketing & SEO</option>
+                    <option value="book-publishing">Book Publishing</option>
+                    <option value="children-book-publishing">Children Book Publishing</option>
+                    <option value="illustrations">Illustrations</option>
+                    <option value="ghostwriting">Ghostwriting</option>
+                    <option value="book-editing-formatting">Book Editing &amp; Formatting</option>
+                    <option value="global-distribution">Global Distribution</option>
+                    <option value="comic-book-publishing">Comic Book Publishing</option>
+                    <option value="religious-publishing">Religious Publishing</option>
+                    <option value="book-marketing">Book Marketing</option>
+                    <option value="audiobook-production">Audiobook Production</option>
+                    <option value="book-video">Book Video</option>
+                    <option value="author-website">Author Website</option>
                     <option value="other">Other</option>
                   </select>
                 </div>

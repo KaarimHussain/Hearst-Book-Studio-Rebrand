@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const carouselVideos = [
   "/videos/hero-bg.mp4",
-  "/videos/video2.mp4", 
-  "/videos/video3.mp4", 
+  "/videos/video2.mp4",
+  "/videos/video3.mp4",
 ];
 
 export default function HeroCarousel() {
@@ -20,7 +20,7 @@ export default function HeroCarousel() {
 
   return (
     <section className="relative w-full min-h-screen flex items-end overflow-hidden bg-black">
-      
+
       {/* Background Videos with crossfade */}
       <AnimatePresence initial={false}>
         <motion.video
@@ -42,7 +42,7 @@ export default function HeroCarousel() {
       <div className="absolute inset-0 bg-black/65 z-10 pointer-events-none"></div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16 pt-24 sm:pt-28"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,11 +65,10 @@ export default function HeroCarousel() {
             <button
               key={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`h-2 transition-all duration-300 ${
-                activeIndex === idx 
-                  ? "bg-[#3075ba] w-10 sm:w-12" 
+              className={`h-2 transition-all duration-300 ${activeIndex === idx
+                  ? "bg-[#3075ba] w-10 sm:w-12"
                   : "bg-white/70 hover:bg-white w-6 sm:w-8 cursor-pointer"
-              }`}
+                }`}
               aria-label={`Go to slide ${idx + 1}`}
             ></button>
           ))}
